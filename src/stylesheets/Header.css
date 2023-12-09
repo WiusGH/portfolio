@@ -1,0 +1,11 @@
+.header {
+  background: linear-gradient(to top, #000000, rgb(0, 0, 103));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.header > li {
+  padding: 10px;
+  list-style-type: none;
+}

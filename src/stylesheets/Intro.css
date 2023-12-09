@@ -1,0 +1,14 @@
+.intro {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro > div {
+  padding: 100px;
+}
+.side-curly {
+  height: 450px;
+  width: 120px;
+}

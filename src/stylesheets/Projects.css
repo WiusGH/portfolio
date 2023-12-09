@@ -1,0 +1,21 @@
+.projects-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+}
+
+.projects {
+  display: flex;
+  flex-direction: row;
+}
+
+.side-bracket {
+  height: 500px;
+  width: 100px;
+}
+
+h2 {
+  text-align: center;
+
+}
