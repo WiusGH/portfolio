@@ -4,9 +4,9 @@ import '../stylesheets/Header.css';
 const Header = () => {
   return (
     <div className='header'>
-      <li>Proyectos</li>
-      <li>Sobre mi</li>
-      <li>Contáctame</li>
+      <li><a href='#about'>Sobre mi</a></li>
+      <li><a href='#projects'>Proyectos</a></li>
+      <li><a href='#contact-me'>Contáctame</a></li>
     </div>
   );
 };

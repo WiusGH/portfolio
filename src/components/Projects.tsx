@@ -6,13 +6,13 @@ import rightSqBr from '../images/RightSqBr.png';
 
 const Projects = () => {
   return (
-    <>
-      <h2>Proyectos</h2>
-      <div className='projects-container'>
-        <div>
-          <img className='side-bracket' src={leftSqBr} alt='Left bracket' />
-        </div>
-        <div className='projects' >
+    <div className='projects-main-container' id='projects'>
+      <div>
+        <img className='side-bracket' src={leftSqBr} alt='Left bracket' />
+      </div>
+      <div>
+        <h2>Proyectos</h2>
+        <div className='projects-container'>
           <Project
             image='https://picsum.photos/200'
             alt='Project'
@@ -29,11 +29,11 @@ const Projects = () => {
             description='Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
           />
         </div>
-        <div>
-          <img className='side-bracket' src={rightSqBr} alt='Right bracket' />
-        </div>
       </div>
-    </>
+      <div>
+        <img className='side-bracket' src={rightSqBr} alt='Right bracket' />
+      </div>
+    </div>
   );
 };
 

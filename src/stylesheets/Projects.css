@@ -1,18 +1,19 @@
-.projects-container {
+.projects-main-container {
   display: flex;
+
   justify-content: center;
   align-items: center;
-  padding: 100px;
 }
 
-.projects {
+.projects-container {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .side-bracket {
-  height: 500px;
+  height: 650px;
   width: 100px;
+  padding: 10px;
 }
 
 h2 {

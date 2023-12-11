@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 .intro > div {
@@ -11,4 +12,17 @@
 .side-curly {
   height: 450px;
   width: 120px;
+}
+
+.profile-pic {
+  border-radius: 50%;
+}
+
+.name {
+  font-size: 3rem;
+}
+
+.title {
+  color: rgb(58, 0, 128);
+  font-size: 2rem;
 }

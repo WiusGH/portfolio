@@ -3,9 +3,17 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 100px;
+  padding: 50px 0;
 }
 
 .side-paren {
   height: 500px;
+  width: 170px;
+  padding: 0 100px;
+}
+
+.about-info {
+  max-width: 600px;
+  font-size: 1.4rem;
+  text-align: center;
 }
