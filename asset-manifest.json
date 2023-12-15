@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.d0716581.css",
+    "main.js": "/portfolio/static/js/main.2d9fe293.js",
+    "static/media/Wius PNG.png": "/portfolio/static/media/Wius PNG.b3358dbbb6f543413a17.png",
+    "static/media/WiusBlogsite.png": "/portfolio/static/media/WiusBlogsite.f3e696e85a79fa923ecc.png",
+    "static/media/SimonGame.png": "/portfolio/static/media/SimonGame.8c2216b7cf9d6bc7de30.png",
+    "static/media/SnakeGame.png": "/portfolio/static/media/SnakeGame.bd8d5762c32a1935c88b.png",
+    "static/media/LeftAnBr.png": "/portfolio/static/media/LeftAnBr.36f4bc184d8e8671281e.png",
+    "static/media/RightAnBr.png": "/portfolio/static/media/RightAnBr.42063044f0fb9de88620.png",
+    "index.html": "/portfolio/index.html",
+    "main.d0716581.css.map": "/portfolio/static/css/main.d0716581.css.map",
+    "main.2d9fe293.js.map": "/portfolio/static/js/main.2d9fe293.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d0716581.css",
+    "static/js/main.2d9fe293.js"
+  ]
+}
