@@ -10,9 +10,9 @@ const About = () => {
         <img className='side-paren' src={leftPare} alt='Left parenthesis'/>
       </div>
       <div>
-        <h2>Sobre mi</h2>
+        <h2>Sobre mí</h2>
         <div className='about-info'>
-          <p>Soy venezolano, tengo 30 años y soy trilingüe (Inglés e italiano). Me gustan mucho los idiomas, deportes extremos y ejercicios físicos. Soy programador/desarrollador web y puedo crear simples sitios web como los de un emprendimiento pequeño que solo quiera exhibir sus servicios o productos como también aplicaciones web más complejas que permitan agregar ítems a un carrito y comprar con pagos en línea.</p>
+          <p>Soy venezolano, tengo 30 años y soy trilingüe (Inglés e italiano). Soy desarrollador web full stack y puedo crear simples sitios web como los de un emprendimiento pequeño que solo quiera exhibir sus servicios o productos como también aplicaciones web más complejas que permitan agregar ítems a un carrito y comprar con pagos en línea.</p>
         </div>
       </div>
       <div>

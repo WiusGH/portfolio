@@ -4,7 +4,7 @@ import Header from './components/Header.tsx';
 import Footer from './components/Footer.tsx';
 import Intro from './components/Intro.tsx';
 import About from './components/About.tsx';
-import Projects from './components/Projects.tsx';
+import Projects from './components/ProjectsContainer.tsx';
 import ContactMe from './components/ContactMe.tsx';
 
 function App() {

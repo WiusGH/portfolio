@@ -15,7 +15,10 @@
 }
 
 .profile-pic {
+  border: 1px solid blue;
   border-radius: 50%;
+  height: 300px;
+  width: 300px;
 }
 
 .name {
@@ -23,6 +26,6 @@
 }
 
 .title {
-  color: rgb(58, 0, 128);
+  color: rgb(163, 7, 183);
   font-size: 2rem;
 }
