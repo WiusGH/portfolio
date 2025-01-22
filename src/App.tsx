@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import useScreenSize from "./components/hooks/useScreenSize";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
+import ProfileInfo from "./components/sidebar content/ProfileInfo";
 
 const App: React.FC = () => {
   const [theme, setTheme] = useState<"light" | "dark">("light");
@@ -51,7 +52,6 @@ const App: React.FC = () => {
           ref={sidebarRef}
           className={`sidebar ${sidebarOpen ? "open" : ""}`}
         >
-          Sidebar Content
           {isSmallScreen && (
             <section className="sidebar-toggle" onClick={toggleSidebar}>
               <IoIosArrowDroprightCircle
@@ -59,7 +59,10 @@ const App: React.FC = () => {
               />
             </section>
           )}
+
+          <ProfileInfo />
         </aside>
+
         <main className="main-content">
           <div className="header">
             <button onClick={toggleTheme}>
