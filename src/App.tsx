@@ -2,6 +2,9 @@ import React, { useState, useEffect, useRef } from "react";
 import useScreenSize from "./components/hooks/useScreenSize";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 import ProfileInfo from "./components/sidebar content/ProfileInfo";
+import AboutMe from "./components/main content/about me/AboutMe";
+import ProfileSection from "./components/containers/ProfileSection";
+import Stack from "./components/main content/stack/Stack";
 
 const App: React.FC = () => {
   const [theme, setTheme] = useState<"light" | "dark">("light");
@@ -59,7 +62,6 @@ const App: React.FC = () => {
               />
             </section>
           )}
-
           <ProfileInfo />
         </aside>
 
@@ -70,6 +72,8 @@ const App: React.FC = () => {
                 ? "Switch to Dark Mode"
                 : "Switch to Light Mode"}
             </button>
+            <ProfileSection children={<AboutMe />} />
+            <ProfileSection children={<Stack />} />
           </div>
         </main>
       </div>

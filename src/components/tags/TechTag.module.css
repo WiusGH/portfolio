@@ -1,0 +1,102 @@
+.techTag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  background-color: var(--secondary-color);
+  border-radius: 15px;
+  margin: 6px;
+  padding: 5px 8px;
+  width: fit-content;
+  svg {
+    font-size: 1.5rem;
+  }
+}
+
+.html {
+  color: #e34c26;
+}
+
+.css {
+  color: #264de4;
+}
+
+.javascript {
+  color: #f7df1e;
+}
+
+.typescript {
+  color: #007acc;
+}
+
+.react {
+  color: #61dbfb;
+}
+
+.python {
+  color: #3776ab;
+}
+
+.java {
+  color: #f89820;
+}
+
+.springboot {
+  color: #6db33f;
+}
+
+.flask {
+  color: var(--text-color);
+}
+
+.vite {
+  color: #646cff;
+}
+
+.mysql {
+  color: #4479a1;
+}
+
+.mongodb {
+  color: #47a248;
+}
+
+.aws {
+  color: #ff9900;
+}
+
+.git {
+  color: #f34f29;
+}
+
+.github {
+  color: var(--text-color);
+}
+
+.vscode {
+  color: #007acc;
+}
+
+.intellij {
+  color: var(--text-color);
+}
+
+.pycharm {
+  color: var(--text-color);
+}
+
+.render {
+  color: var(--text-color);
+}
+
+.vercel {
+  color: var(--text-color);
+}
+
+.postman {
+  color: #ff6f00;
+}
+
+.insomnia {
+  color: #6441a5;
+}
