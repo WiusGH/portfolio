@@ -1,0 +1,9 @@
+.certificationCard {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  padding: 10px;
+  img {
+    width: 100%;
+  }
+}
