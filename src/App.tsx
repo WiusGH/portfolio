@@ -5,6 +5,8 @@ import ProfileInfo from "./components/sidebar content/ProfileInfo";
 import AboutMe from "./components/main content/about me/AboutMe";
 import ProfileSection from "./components/containers/ProfileSection";
 import Stack from "./components/main content/stack/Stack";
+import Projects from "./components/main content/projects/Projects";
+import Certifications from "./components/main content/certifications/Certifications";
 
 const App: React.FC = () => {
   const [theme, setTheme] = useState<"light" | "dark">("light");
@@ -74,6 +76,8 @@ const App: React.FC = () => {
             </button>
             <ProfileSection children={<AboutMe />} />
             <ProfileSection children={<Stack />} />
+            <ProfileSection children={<Projects />} />
+            <ProfileSection children={<Certifications />} />
           </div>
         </main>
       </div>
