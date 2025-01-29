@@ -5,11 +5,12 @@
   gap: 3px;
   background-color: var(--secondary-color);
   border-radius: 15px;
+  cursor: default;
   margin: 6px;
   padding: 5px 8px;
   width: fit-content;
   svg {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 }
 

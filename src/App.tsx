@@ -7,19 +7,13 @@ import ProfileSection from "./components/containers/ProfileSection";
 import Stack from "./components/main content/stack/Stack";
 import Projects from "./components/main content/projects/Projects";
 import Certifications from "./components/main content/certifications/Certifications";
+import Header from "./components/layout/Header";
 
 const App: React.FC = () => {
-  const [theme, setTheme] = useState<"light" | "dark">("light");
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const sidebarRef = useRef<HTMLDivElement>(null);
 
   const isSmallScreen = useScreenSize(768);
-
-  const toggleTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
-    setTheme(newTheme);
-    document.documentElement.setAttribute("data-theme", newTheme);
-  };
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
@@ -68,17 +62,11 @@ const App: React.FC = () => {
         </aside>
 
         <main className="main-content">
-          <div className="header">
-            <button onClick={toggleTheme}>
-              {theme === "light"
-                ? "Switch to Dark Mode"
-                : "Switch to Light Mode"}
-            </button>
-            <ProfileSection children={<AboutMe />} />
-            <ProfileSection children={<Stack />} />
-            <ProfileSection children={<Projects />} />
-            <ProfileSection children={<Certifications />} />
-          </div>
+          <Header />
+          <ProfileSection children={<AboutMe />} />
+          <ProfileSection children={<Stack />} />
+          <ProfileSection children={<Projects />} />
+          <ProfileSection children={<Certifications />} />
         </main>
       </div>
     </div>

@@ -1,9 +1,12 @@
 .certificationCard {
   display: flex;
   flex-direction: column;
+  background-color: var(--secondary-color);
+  border-radius: 6px;
   margin: 10px;
-  padding: 10px;
+  padding: 15px;
   img {
+    border-radius: 8px;
     width: 100%;
   }
 }
