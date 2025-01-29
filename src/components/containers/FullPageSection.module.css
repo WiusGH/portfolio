@@ -1,0 +1,65 @@
+.fullPageContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  transition: height 0.3s ease-in-out;
+}
+
+.fullPageSection {
+  height: 5%;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: transparent;
+  transition: height 0.3s ease-in-out;
+  cursor: pointer;
+  position: relative; /* Ensure layering */
+}
+
+/* Expanded section takes more space */
+.expanded {
+  height: 70%;
+}
+
+/* Collapsed sections shrink to distribute space */
+.collapsed {
+  height: calc((100% - 70%) / 4);
+}
+
+/* Optional: Style scrollbar */
+.fullPageSection::-webkit-scrollbar {
+  width: 6px;
+}
+
+.fullPageSection::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+.fullPageSection::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Cover layer for collapsed sections */
+.coverLayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  z-index: 1; /* Ensure it appears above the content */
+  pointer-events: none; /* Allow scroll events to pass through */
+}
+
+.coverLayer h2 {
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+}

@@ -3,17 +3,33 @@ import useScreenSize from "./components/hooks/useScreenSize";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 import ProfileInfo from "./components/sidebar content/ProfileInfo";
 import AboutMe from "./components/main content/about me/AboutMe";
-import ProfileSection from "./components/containers/ProfileSection";
+// import ProfileSection from "./components/containers/ProfileSection";
 import Stack from "./components/main content/stack/Stack";
 import Projects from "./components/main content/projects/Projects";
 import Certifications from "./components/main content/certifications/Certifications";
 import Header from "./components/layout/Header";
+// import FullPageSection from "./components/containers/FullPageSection";
 
 const App: React.FC = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const sidebarRef = useRef<HTMLDivElement>(null);
-
   const isSmallScreen = useScreenSize(768);
+
+  // const sections = [
+  //   <Header />,
+  //   <AboutMe />,
+  //   <Stack />,
+  //   <Projects />,
+  //   <Certifications />,
+  // ];
+
+  // const titles = [
+  //   "Header",
+  //   "Sobre mi",
+  //   "Stack",
+  //   "Proyectos",
+  //   "Certificaciones",
+  // ];
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
@@ -62,11 +78,12 @@ const App: React.FC = () => {
         </aside>
 
         <main className="main-content">
+          {/* <FullPageSection titles={titles}>{sections}</FullPageSection> */}
           <Header />
-          <ProfileSection children={<AboutMe />} />
-          <ProfileSection children={<Stack />} />
-          <ProfileSection children={<Projects />} />
-          <ProfileSection children={<Certifications />} />
+          <AboutMe />
+          <Stack />
+          <Projects />
+          <Certifications />
         </main>
       </div>
     </div>

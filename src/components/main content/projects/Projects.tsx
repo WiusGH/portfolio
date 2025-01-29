@@ -34,15 +34,6 @@ const Projects = () => {
       techs: ["React", "Typescript", "Material UI", "Vercel"],
     },
     {
-      title: "Encriptador de texto de Alura",
-      description:
-        "Conversor de monedas cuyo backend fue creado con Java pero como extra le implemente un frontend para el usuario.",
-      image: "",
-      url: "https://wiusgh.github.io/AluraChallengeEncriptador/",
-      githubUrl: "https://github.com/WiusGH/AluraChallengeEncriptador",
-      techs: ["React", "Typescript", "Github"],
-    },
-    {
       title: "Conversor de monedas de Alura",
       description:
         "Conversor de monedas cuyo backend fue creado con Java pero como extra le implemente un frontend para el usuario.",
@@ -55,14 +46,14 @@ const Projects = () => {
       title: "Cerrajería Alex",
       description:
         "Sitio web con dominio propio creado para que mi cliente pudiese ofrecer sus servicios.",
-      image: "",
+      image: converter,
       url: "https://www.cerrajerialex.cl/",
       techs: ["React", "Javascript"],
     },
     {
       title: "GoFit App",
       description: "Plataforma de turnos para clases de fitness.",
-      image: "",
+      image: converter,
       url: "",
       githubUrl: "https://github.com/WiusGH/Simulacion-c15-React-Python",
       techs: ["React", "Javascript"],

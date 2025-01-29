@@ -6,6 +6,8 @@ import uc from "../../../assets/screenshots/uc.png";
 import udemyPython from "../../../assets/screenshots/udemy-python.png";
 import udemyWeb from "../../../assets/screenshots/udemy-web.png";
 import generation from "../../../assets/screenshots/generation.png";
+import possEs from "../../../assets/screenshots/poss-es.png";
+import possEn from "../../../assets/screenshots/poss-en.png";
 
 const Certifications = () => {
   const certificationsList = [
@@ -50,6 +52,20 @@ const Certifications = () => {
       description: "Certificado Finalización de Generation Chile",
       image: generation,
       date: "01/11/2023",
+      url: "",
+    },
+    {
+      title: "Proof of soft skills en español",
+      description: "Certificado de habilidades blandas de No Country",
+      image: possEs,
+      date: "01/06/2024",
+      url: "",
+    },
+    {
+      title: "Proof of soft skills en inglés",
+      description: "Certificado de habilidades blandas de No Country",
+      image: possEn,
+      date: "01/06/2024",
       url: "",
     },
   ];
