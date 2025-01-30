@@ -1,5 +1,6 @@
 import { useState } from "react";
 import style from "./Header.module.css";
+import ThemeToggle from "../buttons/ThemeToggle";
 
 const Header = () => {
   const [theme, setTheme] = useState<"light" | "dark">("light");
@@ -18,9 +19,7 @@ const Header = () => {
         <li>Proyectos</li>
         <li>Certificados</li>
       </ul>
-      <button className={style.themeButton} onClick={toggleTheme}>
-        {theme === "light" ? "Switch to Dark Mode" : "Switch to Light Mode"}
-      </button>
+      <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
     </div>
   );
 };

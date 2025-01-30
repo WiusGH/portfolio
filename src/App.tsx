@@ -8,6 +8,7 @@ import Stack from "./components/main content/stack/Stack";
 import Projects from "./components/main content/projects/Projects";
 import Certifications from "./components/main content/certifications/Certifications";
 import Header from "./components/layout/Header";
+import ProfileSection from "./components/containers/ProfileSection";
 // import FullPageSection from "./components/containers/FullPageSection";
 
 const App: React.FC = () => {
@@ -80,10 +81,18 @@ const App: React.FC = () => {
         <main className="main-content">
           {/* <FullPageSection titles={titles}>{sections}</FullPageSection> */}
           <Header />
-          <AboutMe />
-          <Stack />
-          <Projects />
-          <Certifications />
+          <ProfileSection>
+            <AboutMe />
+          </ProfileSection>
+          <ProfileSection>
+            <Stack />
+          </ProfileSection>
+          <ProfileSection>
+            <Projects />
+          </ProfileSection>
+          <ProfileSection>
+            <Certifications />
+          </ProfileSection>
         </main>
       </div>
     </div>
