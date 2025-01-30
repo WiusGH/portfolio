@@ -1,14 +1,31 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import style from "./Header.module.css";
 import ThemeToggle from "../buttons/ThemeToggle";
 
 const Header = () => {
-  const [theme, setTheme] = useState<"light" | "dark">("light");
+  const getInitialTheme = (): "light" | "dark" => {
+    // Check if the user has a saved theme in localStorage
+    const savedTheme = localStorage.getItem("theme") as "light" | "dark" | null;
+    if (savedTheme) return savedTheme;
+
+    // Detect system preference
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
+    return prefersDark ? "dark" : "light";
+  };
+
+  const [theme, setTheme] = useState<"light" | "dark">(getInitialTheme);
+
+  useEffect(() => {
+    // Apply the selected theme to the document
+    document.documentElement.setAttribute("data-theme", theme);
+    // Save theme choice to localStorage
+    localStorage.setItem("theme", theme);
+  }, [theme]);
 
   const toggleTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
-    setTheme(newTheme);
-    document.documentElement.setAttribute("data-theme", newTheme);
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
   };
 
   return (
