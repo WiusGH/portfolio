@@ -16,6 +16,11 @@ const App: React.FC = () => {
   const sidebarRef = useRef<HTMLDivElement>(null);
   const isSmallScreen = useScreenSize(768);
 
+  const aboutRef = useRef<HTMLElement | null>(null);
+  const stackRef = useRef<HTMLElement | null>(null);
+  const projectsRef = useRef<HTMLElement | null>(null);
+  const certificationsRef = useRef<HTMLElement | null>(null);
+
   // const sections = [
   //   <Header />,
   //   <AboutMe />,
@@ -80,17 +85,29 @@ const App: React.FC = () => {
 
         <main className="main-content">
           {/* <FullPageSection titles={titles}>{sections}</FullPageSection> */}
-          <Header />
-          <ProfileSection>
+          <Header
+            scrollToSection={(section: string) => {
+              const sections: Record<string, React.RefObject<HTMLElement>> = {
+                about: aboutRef,
+                stack: stackRef,
+                projects: projectsRef,
+                certifications: certificationsRef,
+              };
+              sections[section]?.current?.scrollIntoView({
+                behavior: "smooth",
+              });
+            }}
+          />
+          <ProfileSection ref={aboutRef}>
             <AboutMe />
           </ProfileSection>
-          <ProfileSection>
+          <ProfileSection ref={stackRef}>
             <Stack />
           </ProfileSection>
-          <ProfileSection>
+          <ProfileSection ref={projectsRef}>
             <Projects />
           </ProfileSection>
-          <ProfileSection>
+          <ProfileSection ref={certificationsRef}>
             <Certifications />
           </ProfileSection>
         </main>

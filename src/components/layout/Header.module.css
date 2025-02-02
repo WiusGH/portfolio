@@ -1,7 +1,11 @@
 .header {
   display: flex;
   align-items: center;
+  background-color: var(--background-color);
+  position: sticky;
   padding: 0 3%;
+  top: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
   ul {
     display: flex;
     flex: 1;
@@ -9,4 +13,14 @@
     list-style-type: none;
     padding: 0;
   }
+}
+
+.header.hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.header.visible {
+  transform: translateY(0);
+  opacity: 1;
 }

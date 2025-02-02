@@ -1,8 +1,15 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import style from "./Header.module.css";
 import ThemeToggle from "../buttons/ThemeToggle";
 
-const Header = () => {
+interface HeaderProps {
+  scrollToSection: (section: string) => void;
+}
+
+const Header: React.FC<HeaderProps> = ({ scrollToSection }) => {
+  const [visible, setVisible] = useState(true);
+  const [lastScroll, setLastScroll] = useState(0);
+
   const getInitialTheme = (): "light" | "dark" => {
     // Check if the user has a saved theme in localStorage
     const savedTheme = localStorage.getItem("theme") as "light" | "dark" | null;
@@ -28,16 +35,45 @@ const Header = () => {
     setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
   };
 
+  const handleScroll = useCallback(() => {
+    const currentScroll = window.scrollY;
+
+    if (currentScroll > lastScroll && currentScroll > 100) {
+      setVisible(false); // User is scrolling down
+    } else {
+      setVisible(true); // User is scrolling up
+    }
+
+    setLastScroll(currentScroll);
+  }, [lastScroll]);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [handleScroll]);
+
   return (
-    <div className={style.header}>
+    <nav
+      className={`${style.header} ${visible ? style.visible : style.hidden}`}
+    >
       <ul>
-        <li>Sobre mí</li>
-        <li>Stack</li>
-        <li>Proyectos</li>
-        <li>Certificados</li>
+        <li>
+          <button onClick={() => scrollToSection("about")}>Sobre mí</button>
+        </li>
+        <li>
+          <button onClick={() => scrollToSection("stack")}>Stack</button>
+        </li>
+        <li>
+          <button onClick={() => scrollToSection("projects")}>Proyectos</button>
+        </li>
+        <li>
+          <button onClick={() => scrollToSection("certifications")}>
+            Certificados
+          </button>
+        </li>
       </ul>
       <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
-    </div>
+    </nav>
   );
 };
 
