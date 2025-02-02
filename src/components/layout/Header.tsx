@@ -57,20 +57,10 @@ const Header: React.FC<HeaderProps> = ({ scrollToSection }) => {
       className={`${style.header} ${visible ? style.visible : style.hidden}`}
     >
       <ul>
-        <li>
-          <button onClick={() => scrollToSection("about")}>Sobre mí</button>
-        </li>
-        <li>
-          <button onClick={() => scrollToSection("stack")}>Stack</button>
-        </li>
-        <li>
-          <button onClick={() => scrollToSection("projects")}>Proyectos</button>
-        </li>
-        <li>
-          <button onClick={() => scrollToSection("certifications")}>
-            Certificados
-          </button>
-        </li>
+        <li onClick={() => scrollToSection("about")}>Sobre mí</li>
+        <li onClick={() => scrollToSection("stack")}>Stack</li>
+        <li onClick={() => scrollToSection("projects")}>Proyectos</li>
+        <li onClick={() => scrollToSection("certifications")}>Certificados</li>
       </ul>
       <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
     </nav>

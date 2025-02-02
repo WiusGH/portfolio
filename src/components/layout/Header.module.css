@@ -12,6 +12,14 @@
     gap: 5%;
     list-style-type: none;
     padding: 0;
+    li {
+      cursor: pointer;
+      padding: 5px;
+      &:hover {
+        color: var(--primary-color);
+        text-shadow: var(--primary-color) 0 0 5px;
+      }
+    }
   }
 }
 
