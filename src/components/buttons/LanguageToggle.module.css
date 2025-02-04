@@ -1,0 +1,49 @@
+.languageToggle {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  border-radius: 15px;
+  background: var(--background-color-opposite);
+  border: none;
+  color: var(--text-color-opposite);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 5px 3px;
+  transition: background 0.3s ease-in-out;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.languageToggle .toggle {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(3px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.languageToggle .english {
+  transform: translateX(30px);
+}
+
+.iconContainer {
+  position: absolute;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px;
+  width: 75%;
+}
+
+.flagIcon {
+  margin: auto 0;
+  width: 1.3rem;
+}
