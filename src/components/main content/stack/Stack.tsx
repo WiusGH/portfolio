@@ -4,7 +4,7 @@ import style from "./Stack.module.css";
 const Stack = () => {
   return (
     <div className={style.stack}>
-      <h5>Stack</h5>
+      <h5>Tecnologías y herramientas</h5>
       <h6>Frontend</h6>
       <section>
         <TechTag tech="HTML" />

@@ -1,6 +1,8 @@
 :root {
   --background-color: #fbfbfb;
+  --background-color-opposite: #121212;
   --text-color: #333333;
+  --text-color-opposite: #e0e0e0;
   --primary-color: #0078ff;
   --secondary-color: #f0f0f0;
   --sidebar-background: #e8f9ff;
@@ -18,18 +20,23 @@
 
 [data-theme="dark"] {
   --background-color: #121212;
+  --background-color-opposite: #fbfbfb;
   --text-color: #e0e0e0;
+  --text-color-opposite: #333333;
   --primary-color: #66ccff;
   --secondary-color: #333333;
   --sidebar-background: #1e1e1e;
   --tag-color: #003161;
 }
 
+* {
+  margin: 0;
+}
+
 body {
   background-color: var(--background-color);
   color: var(--text-color);
   font-family: "Arial", sans-serif;
-  margin: 0;
   transition: background-color 0.3s, color 0.3s;
 }
 

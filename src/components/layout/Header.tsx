@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import style from "./Header.module.css";
 import ThemeToggle from "../buttons/ThemeToggle";
+import LanguageToggle from "../buttons/LanguageToggle";
 
 interface HeaderProps {
   scrollToSection: (section: string) => void;
@@ -53,17 +54,22 @@ const Header: React.FC<HeaderProps> = ({ scrollToSection }) => {
   }, [handleScroll]);
 
   return (
-    <nav
+    <header
       className={`${style.header} ${visible ? style.visible : style.hidden}`}
     >
-      <ul>
-        <li onClick={() => scrollToSection("about")}>Sobre mí</li>
-        <li onClick={() => scrollToSection("stack")}>Stack</li>
-        <li onClick={() => scrollToSection("projects")}>Proyectos</li>
-        <li onClick={() => scrollToSection("certifications")}>Certificados</li>
-      </ul>
+      <nav>
+        <ul>
+          <li onClick={() => scrollToSection("about")}>Sobre mí</li>
+          <li onClick={() => scrollToSection("stack")}>Stack</li>
+          <li onClick={() => scrollToSection("projects")}>Proyectos</li>
+          <li onClick={() => scrollToSection("certifications")}>
+            Certificados
+          </li>
+        </ul>
+      </nav>
+      <LanguageToggle />
       <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
-    </nav>
+    </header>
   );
 };
 

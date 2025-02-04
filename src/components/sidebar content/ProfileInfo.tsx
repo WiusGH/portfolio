@@ -1,54 +1,30 @@
 import style from "./ProfileInfo.module.css";
 import profilePic from "../../assets/prof-pic.png";
+import ContactButton from "../buttons/ContactButton";
+import CVButton from "../buttons/CVButton";
 
 const ProfileInfo = () => {
   return (
-    <div>
-      <div className={style.imageWrapper}>
+    <div className={style.profileInfo}>
+      <section className={style.imageWrapper}>
         <img src={profilePic} alt="Profile" className={style.profilePic} />
-      </div>
-      <h1>Wilscónidel Yánez</h1>
-      <h3>Desarrollador full stack</h3>
-      <h4>Dirección:</h4>
-      <p>Pasaje Cinco 5414, San Miguel - Región Metropolitana</p>
-      <h4>Contacto:</h4>
-      <p>
-        <a
-          href="mailto:wius93@gmail"
-          target="_blanck"
-          rel="noopener noreferrer"
-        >
-          wius93@gmail.com
-        </a>
-      </p>
-      <p>
-        <a
-          href="https://wa.me/56935448591"
-          target="_blanck"
-          rel="noopener noreferrer"
-        >
-          +56 9 3544 8591
-        </a>
-      </p>
-      <h4>Redes:</h4>
-      <p>
-        <a
-          href="https://www.linkedin.com/in/wius/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          LinkedIn
-        </a>
-      </p>
-      <p>
-        <a
-          href="https://github.com/WiusGH"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Github
-        </a>
-      </p>
+      </section>
+      <section>
+        <h1>Wilscónidel Yánez</h1>
+        <h3>Desarrollador full stack</h3>
+      </section>
+      <section>
+        <h4>Dirección:</h4>
+        <p>Pasaje Cinco 5414, San Miguel - Región Metropolitana</p>
+      </section>
+      <section>
+        <h4>Contacto:</h4>
+        <ContactButton type="GitHub" />
+        <ContactButton type="LinkedIn" />
+        <ContactButton type="Email" />
+        <ContactButton type="WhatsApp" />
+        <CVButton />
+      </section>
     </div>
   );
 };

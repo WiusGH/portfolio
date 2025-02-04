@@ -1,8 +1,23 @@
+.profileInfo {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1%;
+  height: 100%;
+  h1,
+  h3 {
+    margin-top: 5px;
+    text-align: center;
+    width: 100%;
+  }
+}
+
 .imageWrapper {
-  aspect-ratio: 1 / 1; /* Maintains a square shape */
+  aspect-ratio: 1 / 1;
   background-color: white;
   border-radius: 50%;
-  box-shadow: inset 0 0 0 1px black; /* Round, insed border */
+  box-shadow: inset 0 0 0 1px black;
   overflow: hidden;
   padding-top: 3%;
   width: 100%;
