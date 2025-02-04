@@ -4,13 +4,15 @@ import sweetCreation from "../../../assets/screenshots/sweet-creation.png";
 import ProjectCard from "../../cards/ProjectCard";
 import betterCommerce from "../../../assets/screenshots/better-commerce.png";
 import converter from "../../../assets/screenshots/converter.png";
+import cerrajeria from "../../../assets/screenshots/cerrajero.png";
+import { useLanguage } from "../../contexts/LanguageContext";
 
 const Projects = () => {
+  const { t } = useLanguage();
   const projectsList = [
     {
       title: "PlayDOM",
-      description:
-        "Aplicación web que permite a los usuarios disfrutar de una variedad de juegos creados con HTML, CSS y TypeScript.",
+      description: t("playDOM"),
       image: playDom,
       url: "https://s15-25.onrender.com/",
       githubUrl: "https://github.com/WiusGH/Simulacion-s15-React-PHP",
@@ -18,16 +20,14 @@ const Projects = () => {
     },
     {
       title: "Sweet Creation",
-      description:
-        "Aplicación web que permite a los usuarios hacer pedidos personalizados de productos de pastelería.",
+      description: t("sweetCreation"),
       image: sweetCreation,
       url: "https://www.sweetcreation.store/",
       techs: ["React", "Vite", "Typescript", "Vercel"],
     },
     {
       title: "Visualizador de productos de un E-commerce",
-      description:
-        "Visualizador de productos creado con componentes reutilizables y dinámicos que permiten filtrar y ordenar los productos de un E-commerce.",
+      description: t("eCommerce"),
       image: betterCommerce,
       url: "https://prueba-tecnica-silk.vercel.app/",
       githubUrl: "https://github.com/WiusGH/prueba-tecnica",
@@ -35,8 +35,7 @@ const Projects = () => {
     },
     {
       title: "Conversor de monedas de Alura",
-      description:
-        "Conversor de monedas cuyo backend fue creado con Java pero como extra le implemente un frontend para el usuario.",
+      description: t("converter"),
       image: converter,
       url: "https://wiusgh.github.io/AluraChallengeConversorDeMonedas/",
       githubUrl: "https://github.com/WiusGH/AluraChallengeConversorDeMonedas",
@@ -44,15 +43,14 @@ const Projects = () => {
     },
     {
       title: "Cerrajería Alex",
-      description:
-        "Sitio web con dominio propio creado para que mi cliente pudiese ofrecer sus servicios.",
-      image: converter,
+      description: t("cerrajeria"),
+      image: cerrajeria,
       url: "https://www.cerrajerialex.cl/",
       techs: ["React", "Javascript"],
     },
     {
       title: "GoFit App",
-      description: "Plataforma de turnos para clases de fitness.",
+      description: t("goFit"),
       image: converter,
       url: "",
       githubUrl: "https://github.com/WiusGH/Simulacion-c15-React-Python",
@@ -62,7 +60,7 @@ const Projects = () => {
 
   return (
     <div className={style.projects}>
-      <h5>Proyectos</h5>
+      <h5>{t("projects")}</h5>
       <section className={style.projectList}>
         {projectsList.map((project) => (
           <ProjectCard

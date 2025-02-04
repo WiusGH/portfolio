@@ -1,10 +1,12 @@
+import { useLanguage } from "../../contexts/LanguageContext";
 import TechTag from "../../tags/TechTag";
 import style from "./Stack.module.css";
 
 const Stack = () => {
+  const { t } = useLanguage();
   return (
     <div className={style.stack}>
-      <h5>Tecnologías y herramientas</h5>
+      <h5>{t("stack")}</h5>
       <h6>Frontend</h6>
       <section>
         <TechTag tech="HTML" />
@@ -21,13 +23,13 @@ const Stack = () => {
         <TechTag tech="Java" />
         <TechTag tech="Springboot" />
       </section>
-      <h6>Database</h6>
+      <h6>{t("database")}</h6>
       <section>
         <TechTag tech="MySQL" />
         <TechTag tech="MongoDB" />
         <TechTag tech="AWS" />
       </section>
-      <h6>Herramientas</h6>
+      <h6>{t("tools")}</h6>
       <section>
         <TechTag tech="Git" />
         <TechTag tech="Github" />

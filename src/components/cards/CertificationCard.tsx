@@ -1,4 +1,5 @@
 import style from "./CertificationCard.module.css";
+import { useLanguage } from "../contexts/LanguageContext";
 
 interface CertificationCardProps {
   title: string;
@@ -15,14 +16,17 @@ const CertificationCard: React.FC<CertificationCardProps> = ({
   date,
   url,
 }) => {
+  const { t } = useLanguage();
   return (
     <div className={style.certificationCard}>
       <h6>{title}</h6>
       <img src={image} alt={title} />
       <p>{description}</p>
-      <p>Fecha: {date}</p>
+      <p>
+        {t("date")}: {date}
+      </p>
       <a href={url} target="_blank" rel="noopener noreferrer">
-        <p>Ver certificación</p>
+        <p>{t("seeCertification")}</p>
       </a>
     </div>
   );

@@ -8,62 +8,63 @@ import udemyWeb from "../../../assets/screenshots/udemy-web.png";
 import generation from "../../../assets/screenshots/generation.png";
 import possEs from "../../../assets/screenshots/poss-es.png";
 import possEn from "../../../assets/screenshots/poss-en.png";
+import { useLanguage } from "../../contexts/LanguageContext";
 
 const Certifications = () => {
+  const { t } = useLanguage();
   const certificationsList = [
     {
       title: "Políglota",
-      description: "Certificado de proficiencia en inglés",
+      description: t("poliglota"),
       image: poliglota,
       date: "01/12/2023",
       url: "https://drive.google.com/file/d/1uloTLth6mLOS7EJz_IofsPMW8q3ajMIB/view?usp=sharing",
     },
     {
       title: "Oracle Next Generation G7",
-      description: "Certificado Finalización de formación backend",
+      description: t("alura"),
       image: g7,
       date: "12/01/2025",
       url: "",
     },
     {
       title: "Universidad de Chile",
-      description: "Introducción a la programación con Python",
+      description: t("udc"),
       image: uc,
       date: "11/07/2024",
       url: "",
     },
     {
       title: "Python Pro bootcamp",
-      description: "Certificado de completación de curso de Python de Udemy",
+      description: t("udemyPython"),
       image: udemyPython,
       date: "24/06/2024",
       url: "",
     },
     {
       title: "Web development bootcamp",
-      description:
-        "Certificado de completación de curso de desarrollo web de Udemy",
+      description: t("udemyWeb"),
       image: udemyWeb,
       date: "24/06/2024",
       url: "",
     },
     {
       title: "Desarrollo full stack Java",
-      description: "Certificado Finalización de Generation Chile",
+      description: t("generation"),
       image: generation,
       date: "01/11/2023",
       url: "",
     },
     {
       title: "Proof of soft skills en español",
-      description: "Certificado de habilidades blandas de No Country",
+      description: t("poss"),
       image: possEs,
       date: "01/06/2024",
       url: "",
     },
     {
       title: "Proof of soft skills en inglés",
-      description: "Certificado de habilidades blandas de No Country",
+      description: t("poss"),
       image: possEn,
       date: "01/06/2024",
       url: "",
@@ -72,7 +73,7 @@ const Certifications = () => {
 
   return (
     <div className={style.certifications}>
-      <h5>Certificaciones</h5>
+      <h5>{t("certifications")}</h5>
       <section className={style.certificationsList}>
         {certificationsList.map((certification) => (
           <CertificationCard

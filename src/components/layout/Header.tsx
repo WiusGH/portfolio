@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import style from "./Header.module.css";
 import ThemeToggle from "../buttons/ThemeToggle";
 import LanguageToggle from "../buttons/LanguageToggle";
+import { useLanguage } from "../contexts/LanguageContext";
 
 interface HeaderProps {
   scrollToSection: (section: string) => void;
@@ -10,6 +11,7 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ scrollToSection }) => {
   const [visible, setVisible] = useState(true);
   const [lastScroll, setLastScroll] = useState(0);
+  const { t } = useLanguage();
 
   const getInitialTheme = (): "light" | "dark" => {
     // Check if the user has a saved theme in localStorage
@@ -59,11 +61,11 @@ const Header: React.FC<HeaderProps> = ({ scrollToSection }) => {
     >
       <nav>
         <ul>
-          <li onClick={() => scrollToSection("about")}>Sobre mí</li>
-          <li onClick={() => scrollToSection("stack")}>Stack</li>
-          <li onClick={() => scrollToSection("projects")}>Proyectos</li>
+          <li onClick={() => scrollToSection("about")}>{t("about")}</li>
+          <li onClick={() => scrollToSection("stack")}>{t("stack")}</li>
+          <li onClick={() => scrollToSection("projects")}>{t("projects")}</li>
           <li onClick={() => scrollToSection("certifications")}>
-            Certificados
+            {t("certifications")}
           </li>
         </ul>
       </nav>

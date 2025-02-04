@@ -1,13 +1,13 @@
-import { useState } from "react";
+import { useLanguage } from "../contexts/LanguageContext";
 import style from "./LanguageToggle.module.css";
 import spain from "../../assets/images/Spain.svg";
 import uk from "../../assets/images/UK.svg";
 
 const LanguageToggle = () => {
-  const [language, setLanguage] = useState("es");
+  const { language, setLanguage } = useLanguage(); // Get language state from context
 
   const toggleLanguage = () => {
-    setLanguage((prev) => (prev === "es" ? "en" : "es"));
+    setLanguage(language === "es" ? "en" : "es"); // Update global state
   };
 
   return (
@@ -20,18 +20,17 @@ const LanguageToggle = () => {
       <div className={style.iconContainer}>
         <img
           className={`${style.flagIcon} ${
-            language !== "es" ? "" : style.hidden
-          }`}
-          src={spain}
-          alt="Spanish flag"
-        />
-
-        <img
-          className={`${style.flagIcon} ${
-            language !== "en" ? "" : style.hidden
+            language === "en" ? "" : style.hidden
           }`}
           src={uk}
           alt="English flag"
+        />
+        <img
+          className={`${style.flagIcon} ${
+            language === "es" ? "" : style.hidden
+          }`}
+          src={spain}
+          alt="Spanish flag"
         />
       </div>
       <div
