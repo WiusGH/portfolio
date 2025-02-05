@@ -1,5 +1,6 @@
 import style from "./CertificationCard.module.css";
 import { useLanguage } from "../contexts/LanguageContext";
+import { IoIosGlobe } from "react-icons/io";
 
 interface CertificationCardProps {
   title: string;
@@ -20,13 +21,22 @@ const CertificationCard: React.FC<CertificationCardProps> = ({
   return (
     <div className={style.certificationCard}>
       <h6>{title}</h6>
-      <img src={image} alt={title} />
-      <p>{description}</p>
-      <p>
+      <img className={style.image} src={image} alt={title} />
+      <p className={style.description}>{description}</p>
+      <p className={style.date}>
         {t("date")}: {date}
       </p>
-      <a href={url} target="_blank" rel="noopener noreferrer">
-        <p>{t("seeCertification")}</p>
+      <a
+        className={style.link}
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span>
+          <IoIosGlobe />
+
+          <p>{t("seeCertification")}</p>
+        </span>
       </a>
     </div>
   );

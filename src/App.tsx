@@ -9,6 +9,7 @@ import Projects from "./components/main content/projects/Projects";
 import Certifications from "./components/main content/certifications/Certifications";
 import Header from "./components/layout/Header";
 import ProfileSection from "./components/containers/ProfileSection";
+import Footer from "./components/layout/Footer";
 // import FullPageSection from "./components/containers/FullPageSection";
 
 const App: React.FC = () => {
@@ -109,6 +110,7 @@ const App: React.FC = () => {
         <ProfileSection ref={certificationsRef}>
           <Certifications />
         </ProfileSection>
+        <Footer />
       </main>
     </div>
   );

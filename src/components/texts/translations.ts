@@ -17,6 +17,7 @@ export const translations = {
     techs: "Technologies",
     title: "Full stack developer",
     tools: "Tools",
+    allRightsReserved: "All rights reserved",
 
     // Projects
     playDOM:
@@ -57,6 +58,7 @@ export const translations = {
     techs: "Tecnologías",
     title: "Desarrolaldor full stack",
     tools: "Herramientas",
+    allRightsReserved: "Todos los derechos reservados",
 
     // Projects
     playDOM:

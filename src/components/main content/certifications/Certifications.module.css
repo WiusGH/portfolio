@@ -1,8 +1,15 @@
 .certifications {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  h5 {
+    font-size: 2rem;
+  }
 }
 
 .certificationsList {
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
 }
