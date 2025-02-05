@@ -1,8 +1,8 @@
 .profileInfo {
-  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   gap: 1%;
   height: 100%;
   h1,
@@ -13,7 +13,7 @@
   }
 }
 
-.imageWrapper {
+.image {
   aspect-ratio: 1 / 1;
   background-color: white;
   border-radius: 50%;
@@ -23,8 +23,43 @@
   width: 100%;
 }
 
-.imageWrapper img {
+.image img {
   height: 100%;
   object-fit: cover;
   width: 100%;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 100%;
+  h1 {
+    font-size: 1.8rem;
+  }
+  h3 {
+    font-size: 1.2rem;
+  }
+}
+
+.address {
+  h4 {
+    font-size: 1.1rem;
+  }
+  p {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+  }
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  .cv {
+    margin-top: 10px;
+  }
 }

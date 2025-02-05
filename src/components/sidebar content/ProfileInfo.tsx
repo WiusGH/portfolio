@@ -8,23 +8,24 @@ const ProfileInfo = () => {
   const { t } = useLanguage();
   return (
     <div className={style.profileInfo}>
-      <section className={style.imageWrapper}>
+      <section className={style.image}>
         <img src={profilePic} alt="Profile" className={style.profilePic} />
       </section>
-      <section>
+      <section className={style.title}>
         <h1>Wilscónidel Yánez</h1>
         <h3>{t("title")}</h3>
       </section>
-      <section>
+      <section className={style.address}>
         <h4>{t("address")}:</h4>
-        <p>Pasaje Cinco 5414, San Miguel - Región Metropolitana</p>
+        <p>Pasaje Cinco 5414, San Miguel, Región Metropolitana, Chile</p>
       </section>
-      <section>
+      <section className={style.contact}>
         <h4>{t("contact")}:</h4>
         <ContactButton type="GitHub" />
         <ContactButton type="LinkedIn" />
         <ContactButton type="Email" />
         <ContactButton type="WhatsApp" />
+        <h4 className={style.cv}>CV:</h4>
         <CVButton />
       </section>
     </div>
