@@ -4,9 +4,9 @@
   gap: 1rem;
   padding: 3%;
   h5 {
-    margin: 5px 0 15px;
+    margin: 0 0 20px;
   }
   h6 {
-    margin: 5px 0;
+    margin-bottom: 5px;
   }
 }

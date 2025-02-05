@@ -67,51 +67,49 @@ const App: React.FC = () => {
   }, [sidebarOpen]);
 
   return (
-    <div>
-      <div className="layout">
-        <aside
-          ref={sidebarRef}
-          className={`sidebar ${sidebarOpen ? "open" : ""}`}
-        >
-          {isSmallScreen && (
-            <section className="sidebar-toggle" onClick={toggleSidebar}>
-              <IoIosArrowDroprightCircle
-                className={`arrow-icon ${sidebarOpen ? "open" : ""}`}
-              />
-            </section>
-          )}
-          <ProfileInfo />
-        </aside>
+    <div className="layout">
+      <aside
+        ref={sidebarRef}
+        className={`sidebar ${sidebarOpen ? "open" : ""}`}
+      >
+        {isSmallScreen && (
+          <section className="sidebar-toggle" onClick={toggleSidebar}>
+            <IoIosArrowDroprightCircle
+              className={`arrow-icon ${sidebarOpen ? "open" : ""}`}
+            />
+          </section>
+        )}
+        <ProfileInfo />
+      </aside>
 
-        <main className="main-content">
-          {/* <FullPageSection titles={titles}>{sections}</FullPageSection> */}
-          <Header
-            scrollToSection={(section: string) => {
-              const sections: Record<string, React.RefObject<HTMLElement>> = {
-                about: aboutRef,
-                stack: stackRef,
-                projects: projectsRef,
-                certifications: certificationsRef,
-              };
-              sections[section]?.current?.scrollIntoView({
-                behavior: "smooth",
-              });
-            }}
-          />
-          <ProfileSection ref={aboutRef}>
-            <AboutMe />
-          </ProfileSection>
-          <ProfileSection ref={stackRef}>
-            <Stack />
-          </ProfileSection>
-          <ProfileSection ref={projectsRef}>
-            <Projects />
-          </ProfileSection>
-          <ProfileSection ref={certificationsRef}>
-            <Certifications />
-          </ProfileSection>
-        </main>
-      </div>
+      <main className="main-content">
+        {/* <FullPageSection titles={titles}>{sections}</FullPageSection> */}
+        <Header
+          scrollToSection={(section: string) => {
+            const sections: Record<string, React.RefObject<HTMLElement>> = {
+              about: aboutRef,
+              stack: stackRef,
+              projects: projectsRef,
+              certifications: certificationsRef,
+            };
+            sections[section]?.current?.scrollIntoView({
+              behavior: "smooth",
+            });
+          }}
+        />
+        <ProfileSection ref={aboutRef}>
+          <AboutMe />
+        </ProfileSection>
+        <ProfileSection ref={stackRef}>
+          <Stack />
+        </ProfileSection>
+        <ProfileSection ref={projectsRef}>
+          <Projects />
+        </ProfileSection>
+        <ProfileSection ref={certificationsRef}>
+          <Certifications />
+        </ProfileSection>
+      </main>
     </div>
   );
 };

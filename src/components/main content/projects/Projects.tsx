@@ -61,7 +61,7 @@ const Projects = () => {
   return (
     <div className={style.projects}>
       <h5>{t("projects")}</h5>
-      <section className={style.projectList}>
+      <div className={style.projectList}>
         {projectsList.map((project) => (
           <ProjectCard
             key={project.title}
@@ -73,7 +73,7 @@ const Projects = () => {
             techs={project.techs}
           />
         ))}
-      </section>
+      </div>
     </div>
   );
 };

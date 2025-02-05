@@ -4,10 +4,9 @@
   align-items: center;
   gap: 3px;
   background-color: var(--tag-color);
-  border-radius: 15px;
+  border-radius: 6px;
   cursor: default;
-  margin: 6px;
-  padding: 5px 8px;
+  padding: 6px 8px;
   width: fit-content;
   svg {
     font-size: 1.3rem;

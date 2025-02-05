@@ -43,7 +43,7 @@ body {
 /* Layout */
 .layout {
   display: grid;
-  grid-template-columns: 280px 1fr;
+  grid-template-columns: 18% 1fr;
   min-height: 100vh;
 }
 
@@ -62,10 +62,10 @@ body {
   /* z-index: 999; */
 }
 
-/* .main-content {
+.main-content {
   overflow-y: auto;
   height: 100vh;
-} */
+}
 
 /* For smaller screens, the sidebar is hidden by default and can be toggled */
 @media (max-width: 768px) {
