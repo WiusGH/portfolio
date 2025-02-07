@@ -6,6 +6,10 @@
   border-radius: 6px;
   padding: 1.5%;
   width: 29%;
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 4%;
+  }
 }
 
 .title {

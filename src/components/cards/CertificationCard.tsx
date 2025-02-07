@@ -20,7 +20,7 @@ const CertificationCard: React.FC<CertificationCardProps> = ({
   const { t } = useLanguage();
   return (
     <div className={style.certificationCard}>
-      <h6>{title}</h6>
+      <h6 className={style.title}>{title}</h6>
       <img className={style.image} src={image} alt={title} />
       <p className={style.description}>{description}</p>
       <p className={style.date}>

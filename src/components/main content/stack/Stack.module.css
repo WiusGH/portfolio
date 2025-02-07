@@ -9,11 +9,16 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 8px;
   }
   h5 {
     font-size: 2rem;
   }
   h6 {
     font-size: 1rem;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
   }
 }
