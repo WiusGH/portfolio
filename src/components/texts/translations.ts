@@ -3,7 +3,7 @@ export const translations = {
   en: {
     about: "About me",
     address: "Address",
-    bio: "I'm a trilingual, self-taught full stack web developer with 2 years of experience developing desktop and mobile web appsn and developing RESTful APIs using relational and non-relational databases. I ensure that my projects are scalable and focused on user data security and privacy. I enjoy working with a team, learning from others and sharing my knowledge, and working on challenging projects.",
+    bio: "I am a trilingual full stack developer with 2 years of experience building web and mobile applications, as well as developing RESTful APIs with relational and non-relational databases. My focus is on scalability, data security, and user privacy, always seeking innovative and efficient solutions. I am passionate about teamwork, learning from others, and sharing my knowledge. I am constantly looking for new challenges that help me grow professionally.",
     certifications: "Certifications",
     contact: "Contact",
     database: "Databases",
@@ -45,7 +45,7 @@ export const translations = {
   es: {
     about: "Sobre mí",
     address: "Dirección",
-    bio: "Soy un desarrollador full stack trilingüe autodidacta con 2 años de experiencia desarrollando aplicaciones web y móviles, y desarrollando APIS RESTful utilizando bases de datos relacionales y no relacionaes. Me aseguro de que mis proyectos sea escalables y con enfoque enla seguridad de los datos de usuario y la privacidad de la información. Me gusta trabajar en equipo, aprender de otros y compartir mis conocimientos, y trabajar en proyectos desafiantes.",
+    bio: "Soy un desarrollador full stack trilingüe con 2 años de experiencia en la creación de aplicaciones web y móviles, así como en el desarrollo de APIs RESTful con bases de datos relacionales y no relacionales. Mi enfoque se centra en la escalabilidad, la seguridad de los datos y la privacidad del usuario, siempre buscando soluciones innovadoras y eficientes. Me gusta trabajar en equipo, aprender de otros y compartir mis conocimientos. Busco constantemente nuevos desafíos que me permitan seguir creciendo como profesional.",
     certifications: "Certificados",
     contact: "Contacto",
     database: "Bases de datos",
