@@ -3,6 +3,8 @@ import style from "./Header.module.css";
 import ThemeToggle from "../buttons/ThemeToggle";
 import LanguageToggle from "../buttons/LanguageToggle";
 import { useLanguage } from "../contexts/LanguageContext";
+import useScreenSize from "../hooks/useScreenSize";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 interface HeaderProps {
   scrollToSection: (section: string) => void;
@@ -11,8 +13,11 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ scrollToSection }) => {
   const [visible, setVisible] = useState(true);
   const [lastScroll, setLastScroll] = useState(0);
+  const [menuOpen, setMenuOpen] = useState(false);
+
   const { t } = useLanguage();
   const mainRef = useRef<HTMLElement | null>(null);
+  const isSmallScreen = useScreenSize(768);
 
   useEffect(() => {
     mainRef.current = document.querySelector("main"); // Get <main> element
@@ -66,20 +71,54 @@ const Header: React.FC<HeaderProps> = ({ scrollToSection }) => {
 
   return (
     <header
-      className={`${style.header} ${visible ? style.visible : style.hidden}`}
+      className={`${isSmallScreen ? style.mobileHeader : style.header} ${
+        visible ? style.visible : style.hidden
+      }`}
     >
-      <nav>
-        <ul>
-          <li onClick={() => scrollToSection("about")}>{t("about")}</li>
-          <li onClick={() => scrollToSection("stack")}>{t("stack")}</li>
-          <li onClick={() => scrollToSection("projects")}>{t("projects")}</li>
-          <li onClick={() => scrollToSection("certifications")}>
-            {t("certifications")}
-          </li>
-        </ul>
-      </nav>
-      <LanguageToggle />
-      <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
+      {isSmallScreen ? (
+        <>
+          <section className={style.buttons}>
+            <LanguageToggle />
+            <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
+          </section>
+          <nav className={`${style.mobileNav} ${menuOpen ? style.open : ""}`}>
+            <ul>
+              <li onClick={() => scrollToSection("about")}>{t("about")}</li>
+              <hr />
+              <li onClick={() => scrollToSection("stack")}>{t("stack")}</li>
+              <hr />
+              <li onClick={() => scrollToSection("projects")}>
+                {t("projects")}
+              </li>
+              <hr />
+              <li onClick={() => scrollToSection("certifications")}>
+                {t("certifications")}
+              </li>
+            </ul>
+          </nav>
+          <GiHamburgerMenu
+            className={style.hamburger}
+            onClick={() => setMenuOpen((prev) => !prev)}
+          />
+        </>
+      ) : (
+        <>
+          <nav>
+            <ul>
+              <li onClick={() => scrollToSection("about")}>{t("about")}</li>
+              <li onClick={() => scrollToSection("stack")}>{t("stack")}</li>
+              <li onClick={() => scrollToSection("projects")}>
+                {t("projects")}
+              </li>
+              <li onClick={() => scrollToSection("certifications")}>
+                {t("certifications")}
+              </li>
+            </ul>
+          </nav>
+          <LanguageToggle />
+          <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
+        </>
+      )}
     </header>
   );
 };

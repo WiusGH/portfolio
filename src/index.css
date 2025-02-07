@@ -59,7 +59,7 @@ body {
   top: 0;
   height: 100vh;
   overflow-y: auto;
-  /* z-index: 999; */
+  z-index: 999;
 }
 
 .main-content {
