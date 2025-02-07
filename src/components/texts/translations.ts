@@ -3,7 +3,7 @@ export const translations = {
   en: {
     about: "About me",
     address: "Address",
-    bio: "I am a trilingual full stack developer with 2 years of experience building web and mobile applications, as well as developing RESTful APIs with relational and non-relational databases. My focus is on scalability, data security, and user privacy, always seeking innovative and efficient solutions. I am passionate about teamwork, learning from others, and sharing my knowledge. I am constantly looking for new challenges that help me grow professionally.",
+    bio: "I am a trilingual full stack developer with 2 years of experience building web and mobile applications, as well as developing RESTful APIs with relational and non-relational databases. My focus is on scalability, data security, and user privacy, always seeking innovative and efficient solutions. I am a team player, learning from others, and sharing my knowledge. I am constantly looking for new challenges that help me grow professionally.",
     certifications: "Certifications",
     contact: "Contact",
     database: "Databases",
