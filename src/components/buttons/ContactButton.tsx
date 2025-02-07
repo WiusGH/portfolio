@@ -9,22 +9,22 @@ interface ContactButtonProps {
 const ContactButton: React.FC<ContactButtonProps> = ({ type }) => {
   const contactInfo = {
     GitHub: {
-      url: "https://github.com/yourusername",
+      url: "https://github.com/WiusGH",
       borderColor: "white",
       icon: <FaGithub color="white" />,
     },
     LinkedIn: {
-      url: "https://linkedin.com/in/yourprofile",
+      url: "https://www.linkedin.com/in/wius/",
       borderColor: "#0077b5",
       icon: <FaLinkedin color="#0077b5" />,
     },
     Email: {
-      url: "mailto:your.email@example.com",
+      url: "mailto:wius93@gmail.com",
       borderColor: "#ff6600",
       icon: <FaEnvelope color="#ff6600" />,
     },
     WhatsApp: {
-      url: "https://wa.me/1234567890",
+      url: "https://wa.me/56935448591",
       borderColor: "#25D366",
       icon: <FaWhatsapp color="#25D366" />,
     },
