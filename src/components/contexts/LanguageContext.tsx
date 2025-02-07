@@ -1,4 +1,10 @@
-import { createContext, useState, ReactNode, useContext } from "react";
+import {
+  createContext,
+  useState,
+  ReactNode,
+  useContext,
+  useEffect,
+} from "react";
 import { translations } from "../texts/translations";
 
 type Language = "en" | "es";
@@ -18,6 +24,11 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
 
   const t = (key: keyof (typeof translations)["en"]) =>
     translations[language][key];
+
+  useEffect(() => {
+    document.documentElement.lang = language;
+    document.title = translations[language]["webTitle"]; // Assuming you have a "title" key in your translations
+  }, [language]);
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage, t }}>

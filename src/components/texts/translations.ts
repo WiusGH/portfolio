@@ -40,6 +40,7 @@ export const translations = {
     udc: "Python programming introduction",
     udemyPython: "Udemy's Python course completion certificate",
     udemyWeb: "Udemy's web development course completion certificate",
+    webTitle: "Portfolio",
   },
   es: {
     about: "Sobre mí",
@@ -81,5 +82,6 @@ export const translations = {
     udc: "Introducción a la programación con Python",
     udemyPython: "Certificado de completación de curso de Python de Udemy",
     udemyWeb: "Certificado de completación de curso de desarrollo web de Udemy",
+    webTitle: "Portafolio",
   },
 };
