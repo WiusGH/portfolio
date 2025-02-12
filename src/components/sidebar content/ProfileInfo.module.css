@@ -63,3 +63,21 @@
     margin-top: 10px;
   }
 }
+
+.languages {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  width: 100%;
+  div {
+    display: flex;
+    gap: 7px;
+    img {
+      width: 10%;
+    }
+    p {
+      margin: auto 0;
+    }
+  }
+}
