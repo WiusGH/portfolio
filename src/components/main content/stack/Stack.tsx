@@ -37,7 +37,7 @@ const Stack = () => {
     const calculateDuration = (ref: React.RefObject<HTMLDivElement>) => {
       if (ref.current) {
         const width = ref.current.scrollWidth;
-        const speed = 50; // Adjust this value for a global fixed speed
+        const speed = 30;
         return width / speed;
       }
       return 10;
@@ -56,76 +56,69 @@ const Stack = () => {
       <h5>{t("stack")}</h5>
 
       <h6>Frontend</h6>
-      <section
-        className={style.slider}
-        style={
-          { "--duration": `${durations.frontend}s` } as React.CSSProperties
-        }
-        ref={frontendRef}
-      >
-        {[...frontend, ...frontend, ...frontend, ...frontend].map(
-          (tech, index) => (
+      <div className={style.sliderContainer}>
+        <section
+          className={style.slider}
+          style={{
+            animationDuration: `${durations.frontend}s`,
+          }}
+          ref={frontendRef}
+        >
+          {frontend.map((tech, index) => (
             <div className={style.slide} key={index}>
               <TechCard tech={tech} />
             </div>
-          )
-        )}
-      </section>
-
+          ))}
+        </section>
+      </div>
       <h6>Backend</h6>
-      <section
-        className={style.slider}
-        style={{ "--duration": `${durations.backend}s` } as React.CSSProperties}
-        ref={backendRef}
-      >
-        {[
-          ...backend,
-          ...backend,
-          ...backend,
-          ...backend,
-          ...backend,
-          ...backend,
-        ].map((tech, index) => (
-          <div className={style.slide} key={index}>
-            <TechCard tech={tech} />
-          </div>
-        ))}
-      </section>
-
+      <div className={style.sliderContainer}>
+        <section
+          className={style.slider}
+          style={{
+            animationDuration: `${durations.backend}s`,
+          }}
+          ref={backendRef}
+        >
+          {backend.map((tech, index) => (
+            <div className={style.slide} key={index}>
+              <TechCard tech={tech} />
+            </div>
+          ))}
+        </section>
+      </div>
       <h6>{t("database")}</h6>
-      <section
-        className={style.slider}
-        style={
-          { "--duration": `${durations.database}s` } as React.CSSProperties
-        }
-        ref={databaseRef}
-      >
-        {[
-          ...database,
-          ...database,
-          ...database,
-          ...database,
-          ...database,
-          ...database,
-        ].map((tech, index) => (
-          <div className={style.slide} key={index}>
-            <TechCard tech={tech} />
-          </div>
-        ))}
-      </section>
-
+      <div className={style.sliderContainer}>
+        <section
+          className={style.slider}
+          style={{
+            animationDuration: `${durations.database}s`,
+          }}
+          ref={databaseRef}
+        >
+          {database.map((tech, index) => (
+            <div className={style.slide} key={index}>
+              <TechCard tech={tech} />
+            </div>
+          ))}
+        </section>
+      </div>
       <h6>{t("tools")}</h6>
-      <section
-        className={style.slider}
-        style={{ "--duration": `${durations.tools}s` } as React.CSSProperties}
-        ref={toolsRef}
-      >
-        {[...tools, ...tools].map((tech, index) => (
-          <div className={style.slide} key={index}>
-            <TechCard tech={tech} />
-          </div>
-        ))}
-      </section>
+      <div className={style.sliderContainer}>
+        <section
+          className={style.slider}
+          style={{
+            animationDuration: `${durations.tools}s`,
+          }}
+          ref={toolsRef}
+        >
+          {tools.map((tech, index) => (
+            <div className={style.slide} key={index}>
+              <TechCard tech={tech} />
+            </div>
+          ))}
+        </section>
+      </div>
     </div>
   );
 };
