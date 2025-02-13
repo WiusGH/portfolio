@@ -1,0 +1,15 @@
+.techCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  background-color: var(--card-color);
+  border-radius: 4px;
+  color: var(--text-color-opposite);
+  padding: 8% 0;
+  width: 100px;
+  img {
+    aspect-ratio: 1 / 1;
+    width: 80%;
+  }
+}

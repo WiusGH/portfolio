@@ -1,24 +1,29 @@
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 .stack {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  width: 60%;
-  section {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 5px;
-    margin-bottom: 8px;
-  }
-  h5 {
-    font-size: 2rem;
-  }
-  h6 {
-    font-size: 1rem;
-  }
-  @media (max-width: 768px) {
-    width: 100%;
-  }
+  gap: 1rem;
+}
+
+.slider {
+  display: flex;
+  overflow: hidden;
+  width: fit-content;
+  white-space: nowrap;
+  position: relative;
+  gap: 1rem;
+  animation: scroll var(--duration, 10s) linear infinite;
+}
+
+.slide {
+  flex: 0 0 auto;
+  min-width: 100px;
 }

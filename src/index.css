@@ -1,6 +1,7 @@
 :root {
   --background-color: #fbfbfb;
   --background-color-opposite: #121212;
+  --card-color: #777575;
   --text-color: #333333;
   --text-color-opposite: #e0e0e0;
   --primary-color: #0078ff;
@@ -21,6 +22,7 @@
 [data-theme="dark"] {
   --background-color: #121212;
   --background-color-opposite: #fbfbfb;
+  --card-color: #c1c0c0;
   --text-color: #e0e0e0;
   --text-color-opposite: #333333;
   --primary-color: #66ccff;
