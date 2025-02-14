@@ -5,7 +5,7 @@ import betterCommerce from "../../../assets/screenshots/better-commerce.png";
 import converter from "../../../assets/screenshots/converter.png";
 import cerrajeria from "../../../assets/screenshots/cerrajero.png";
 import { useLanguage } from "../../contexts/LanguageContext";
-import ProjectsSwiper from "../../swipers/ProjectsSwiper";
+import CustomSwiper from "../../swipers/CustomSwiper";
 
 const Projects = () => {
   const { t } = useLanguage();
@@ -61,9 +61,9 @@ const Projects = () => {
   return (
     <div className={style.projects}>
       <h5>{t("projects")}</h5>
-      <div className={style.projectList}>
-        <ProjectsSwiper projects={projectsList} />
-      </div>
+      <section className={style.projectList}>
+        <CustomSwiper itemsList={projectsList} projects />
+      </section>
     </div>
   );
 };

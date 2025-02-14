@@ -1,4 +1,3 @@
-import CertificationCard from "../../cards/CertificationCard";
 import style from "./Certifications.module.css";
 import poliglota from "../../../assets/screenshots/poliglota.png";
 import g7 from "../../../assets/screenshots/g7.png";
@@ -9,6 +8,7 @@ import generation from "../../../assets/screenshots/generation.png";
 import possEs from "../../../assets/screenshots/poss-es.png";
 import possEn from "../../../assets/screenshots/poss-en.png";
 import { useLanguage } from "../../contexts/LanguageContext";
+import CustomSwiper from "../../swipers/CustomSwiper";
 
 const Certifications = () => {
   const { t } = useLanguage();
@@ -75,16 +75,7 @@ const Certifications = () => {
     <div className={style.certifications}>
       <h5>{t("certifications")}</h5>
       <section className={style.certificationsList}>
-        {certificationsList.map((certification) => (
-          <CertificationCard
-            key={certification.title}
-            title={certification.title}
-            description={certification.description}
-            image={certification.image}
-            date={certification.date}
-            url={certification.url}
-          />
-        ))}
+        <CustomSwiper itemsList={certificationsList} />
       </section>
     </div>
   );
