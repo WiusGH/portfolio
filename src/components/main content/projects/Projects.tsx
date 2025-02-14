@@ -1,11 +1,11 @@
 import style from "./Projects.module.css";
 import playDom from "../../../assets/screenshots/play-dom.png";
 import sweetCreation from "../../../assets/screenshots/sweet-creation.png";
-import ProjectCard from "../../cards/ProjectCard";
 import betterCommerce from "../../../assets/screenshots/better-commerce.png";
 import converter from "../../../assets/screenshots/converter.png";
 import cerrajeria from "../../../assets/screenshots/cerrajero.png";
 import { useLanguage } from "../../contexts/LanguageContext";
+import ProjectsSwiper from "../../swipers/ProjectsSwiper";
 
 const Projects = () => {
   const { t } = useLanguage();
@@ -62,17 +62,7 @@ const Projects = () => {
     <div className={style.projects}>
       <h5>{t("projects")}</h5>
       <div className={style.projectList}>
-        {projectsList.map((project) => (
-          <ProjectCard
-            key={project.title}
-            title={project.title}
-            imageUrl={project.image}
-            description={project.description}
-            siteUrl={project.url}
-            githubUrl={project.githubUrl}
-            techs={project.techs}
-          />
-        ))}
+        <ProjectsSwiper projects={projectsList} />
       </div>
     </div>
   );
