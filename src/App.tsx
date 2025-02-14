@@ -101,9 +101,9 @@ const App: React.FC = () => {
         <ProfileSection ref={aboutRef}>
           <AboutMe />
         </ProfileSection>
-        {/* <ProfileSection ref={stackRef}>
+        <ProfileSection ref={stackRef}>
           <Stack />
-        </ProfileSection> */}
+        </ProfileSection>
         <ProfileSection ref={projectsRef}>
           <Projects />
         </ProfileSection>
