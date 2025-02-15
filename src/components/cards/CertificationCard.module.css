@@ -4,11 +4,11 @@
   background-color: var(--secondary-color);
   gap: 5px;
   border-radius: 6px;
-  padding: 1.5%;
-  width: 75%;
+  padding: 2% 3%;
+  width: 60%;
   @media (max-width: 768px) {
     width: 100%;
-    padding: 4%;
+    padding: 4% 6%;
   }
 }
 

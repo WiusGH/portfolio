@@ -31,7 +31,7 @@ const CustomSwiper: React.FC<CustomSwiperProps> = ({
       centeredSlides={true}
       effect="coverflow"
       coverflowEffect={{
-        rotate: 20,
+        rotate: 5,
         stretch: 100,
         depth: 100,
         modifier: 2,

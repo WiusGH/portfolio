@@ -104,10 +104,10 @@ const App: React.FC = () => {
         <ProfileSection ref={stackRef}>
           <Stack />
         </ProfileSection>
-        <ProfileSection ref={projectsRef} noPadding>
+        <ProfileSection ref={projectsRef} noPadding={isSmallScreen}>
           <Projects />
         </ProfileSection>
-        <ProfileSection ref={certificationsRef} noPadding>
+        <ProfileSection ref={certificationsRef} noPadding={isSmallScreen}>
           <Certifications />
         </ProfileSection>
         <Footer />
