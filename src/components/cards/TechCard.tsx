@@ -1,13 +1,13 @@
 import style from "./TechCard.module.css";
 import html from "../../assets/images/html.png";
-import css from "../../assets/images/css.png";
+import css from "../../assets/images/css.svg";
 import js from "../../assets/images/js.png";
-import ts from "../../assets/images/ts.png";
+import ts from "../../assets/images/ts.svg";
 import react from "../../assets/images/react.png";
 import vite from "../../assets/images/vite.png";
 import python from "../../assets/images/python.png";
 import flask from "../../assets/images/flask.png";
-import java from "../../assets/images/java.png";
+import java from "../../assets/images/java.svg";
 import spring from "../../assets/images/spring.png";
 import mysql from "../../assets/images/mysql.png";
 import postgres from "../../assets/images/postgres.png";
@@ -39,13 +39,13 @@ const TechCard: React.FC<TechCardProps> = ({ tech }) => {
       case "typescript":
         return <img src={ts} alt="typescript" />;
       case "react":
-        return <img src={react} alt="react" />;
+        return <img className={style.rotate} src={react} alt="react" />;
       case "vite":
         return <img src={vite} alt="vite" />;
       case "python":
         return <img src={python} alt="python" />;
       case "flask":
-        return <img src={flask} alt="flask" />;
+        return <img className={style.shadow} src={flask} alt="flask" />;
       case "java":
         return <img src={java} alt="java" />;
       case "springboot":
@@ -69,9 +69,9 @@ const TechCard: React.FC<TechCardProps> = ({ tech }) => {
       case "intellij":
         return <img src={intellij} alt="intellij" />;
       case "render":
-        return <img src={render} alt="render" />;
+        return <img className={style.shadow} src={render} alt="render" />;
       case "vercel":
-        return <img src={vercel} alt="vercel" />;
+        return <img className={style.shadow} src={vercel} alt="vercel" />;
       case "postman":
         return <img src={postman} alt="postman" />;
       case "insomnia":
