@@ -8,7 +8,6 @@ import Stack from "./components/main content/stack/Stack";
 import Projects from "./components/main content/projects/Projects";
 import Certifications from "./components/main content/certifications/Certifications";
 import Header from "./components/layout/Header";
-import ProfileSection from "./components/containers/ProfileSection";
 import Footer from "./components/layout/Footer";
 // import FullPageSection from "./components/containers/FullPageSection";
 
@@ -98,18 +97,18 @@ const App: React.FC = () => {
             });
           }}
         />
-        <ProfileSection ref={aboutRef}>
+        <section ref={aboutRef}>
           <AboutMe />
-        </ProfileSection>
-        <ProfileSection ref={stackRef}>
+        </section>
+        <section ref={stackRef}>
           <Stack />
-        </ProfileSection>
-        <ProfileSection ref={projectsRef} noPadding={isSmallScreen}>
+        </section>
+        <section ref={projectsRef}>
           <Projects />
-        </ProfileSection>
-        <ProfileSection ref={certificationsRef} noPadding={isSmallScreen}>
+        </section>
+        <section ref={certificationsRef}>
           <Certifications />
-        </ProfileSection>
+        </section>
         <Footer />
       </main>
     </div>

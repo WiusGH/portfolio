@@ -5,16 +5,23 @@ import style from "./Stack.module.css";
 
 const Stack = () => {
   const { t } = useLanguage();
+  const sliderRef = useRef<HTMLDivElement>(null);
+  const [animationDistance, setAnimationDistance] = useState("100%");
 
-  const frontendRef = useRef<HTMLDivElement>(null);
-  const backendRef = useRef<HTMLDivElement>(null);
-  const databaseRef = useRef<HTMLDivElement>(null);
-  const toolsRef = useRef<HTMLDivElement>(null);
-
-  const frontend = ["HTML", "CSS", "Javascript", "Typescript", "React", "Vite"];
-  const backend = ["Python", "Flask", "Java", "Springboot"];
-  const database = ["MySQL", "MongoDB", "AWS"];
-  const tools = [
+  const techStack = [
+    "HTML",
+    "CSS",
+    "Javascript",
+    "Typescript",
+    "React",
+    "Vite",
+    "Python",
+    "Flask",
+    "Java",
+    "Springboot",
+    "MySQL",
+    "MongoDB",
+    "AWS",
     "Git",
     "Github",
     "VSCode",
@@ -26,98 +33,35 @@ const Stack = () => {
     "Insomnia",
   ];
 
-  const [durations, setDurations] = useState({
-    frontend: 10,
-    backend: 10,
-    database: 10,
-    tools: 10,
-  });
-
   useEffect(() => {
-    const calculateDuration = (ref: React.RefObject<HTMLDivElement>) => {
-      if (ref.current) {
-        const width = ref.current.scrollWidth;
-        const speed = 30;
-        return width / speed;
-      }
-      return 10;
-    };
-
-    setDurations({
-      frontend: calculateDuration(frontendRef),
-      backend: calculateDuration(backendRef),
-      database: calculateDuration(databaseRef),
-      tools: calculateDuration(toolsRef),
-    });
+    if (sliderRef.current) {
+      const sliderWidth = sliderRef.current.scrollWidth;
+      setAnimationDistance(`-${sliderWidth}px`);
+    }
   }, []);
 
   return (
     <div className={style.stack}>
       <h5>{t("stack")}</h5>
-
-      <h6>Frontend</h6>
       <div className={style.sliderContainer}>
-        <section
+        <div
           className={style.slider}
-          style={{
-            animationDuration: `${durations.frontend}s`,
-          }}
-          ref={frontendRef}
+          style={
+            { "--animation-distance": animationDistance } as React.CSSProperties
+          }
+          ref={sliderRef}
         >
-          {frontend.map((tech, index) => (
-            <div className={style.slide} key={index}>
-              <TechCard tech={tech} />
-            </div>
-          ))}
-        </section>
-      </div>
-      <h6>Backend</h6>
-      <div className={style.sliderContainer}>
-        <section
-          className={style.slider}
-          style={{
-            animationDuration: `${durations.backend}s`,
-          }}
-          ref={backendRef}
-        >
-          {backend.map((tech, index) => (
-            <div className={style.slide} key={index}>
-              <TechCard tech={tech} />
-            </div>
-          ))}
-        </section>
-      </div>
-      <h6>{t("database")}</h6>
-      <div className={style.sliderContainer}>
-        <section
-          className={style.slider}
-          style={{
-            animationDuration: `${durations.database}s`,
-          }}
-          ref={databaseRef}
-        >
-          {database.map((tech, index) => (
-            <div className={style.slide} key={index}>
-              <TechCard tech={tech} />
-            </div>
-          ))}
-        </section>
-      </div>
-      <h6>{t("tools")}</h6>
-      <div className={style.sliderContainer}>
-        <section
-          className={style.slider}
-          style={{
-            animationDuration: `${durations.tools}s`,
-          }}
-          ref={toolsRef}
-        >
-          {tools.map((tech, index) => (
-            <div className={style.slide} key={index}>
-              <TechCard tech={tech} />
-            </div>
-          ))}
-        </section>
+          {[...techStack, ...techStack].map(
+            (
+              tech,
+              index // Duplicate for seamless scrolling
+            ) => (
+              <div className={style.slide} key={index}>
+                <TechCard tech={tech} />
+              </div>
+            )
+          )}
+        </div>
       </div>
     </div>
   );

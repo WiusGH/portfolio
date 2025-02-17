@@ -82,8 +82,6 @@ const Header: React.FC<HeaderProps> = ({ scrollToSection }) => {
             <ul>
               <li onClick={() => scrollToSection("about")}>{t("about")}</li>
               <hr />
-              <li onClick={() => scrollToSection("stack")}>{t("stack")}</li>
-              <hr />
               <li onClick={() => scrollToSection("projects")}>
                 {t("projects")}
               </li>
@@ -91,6 +89,8 @@ const Header: React.FC<HeaderProps> = ({ scrollToSection }) => {
               <li onClick={() => scrollToSection("certifications")}>
                 {t("certifications")}
               </li>
+              <hr />
+              <li onClick={() => scrollToSection("stack")}>{t("stack")}</li>
             </ul>
           </nav>
           <GiHamburgerMenu
@@ -103,13 +103,13 @@ const Header: React.FC<HeaderProps> = ({ scrollToSection }) => {
           <nav>
             <ul>
               <li onClick={() => scrollToSection("about")}>{t("about")}</li>
-              <li onClick={() => scrollToSection("stack")}>{t("stack")}</li>
               <li onClick={() => scrollToSection("projects")}>
                 {t("projects")}
               </li>
               <li onClick={() => scrollToSection("certifications")}>
                 {t("certifications")}
               </li>
+              <li onClick={() => scrollToSection("stack")}>{t("stack")}</li>
             </ul>
           </nav>
           <LanguageToggle />

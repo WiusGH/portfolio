@@ -63,7 +63,7 @@ export const translations = {
     seeRepo: "Ver repositorio",
     seeSite: "Ver sitio",
     spanish: "Español - Nativo",
-    stack: "Stack",
+    stack: "Tecnologías",
     techs: "Tecnologías",
     title: "Desarrollador full stack",
     tools: "Herramientas",
