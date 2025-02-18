@@ -70,7 +70,7 @@ const App: React.FC = () => {
     setTimeout(() => {
       setSidebarOpen(false);
     }, 500);
-  });
+  }, []);
 
   return (
     <div className="layout">
