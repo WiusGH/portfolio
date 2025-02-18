@@ -12,7 +12,7 @@ import Footer from "./components/layout/Footer";
 // import FullPageSection from "./components/containers/FullPageSection";
 
 const App: React.FC = () => {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(true);
   const sidebarRef = useRef<HTMLDivElement>(null);
   const isSmallScreen = useScreenSize(768);
 
@@ -65,6 +65,12 @@ const App: React.FC = () => {
       document.removeEventListener("mousedown", handleOutsideClick);
     };
   }, [sidebarOpen]);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setSidebarOpen(false);
+    }, 500);
+  });
 
   return (
     <div className="layout">
