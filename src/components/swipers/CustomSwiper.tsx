@@ -9,7 +9,7 @@ import useScreenSize from "../hooks/useScreenSize";
 interface CustomSwiperProps {
   itemsList: {
     title: string;
-    description: string;
+    description?: string;
     image1: string;
     image2: string;
     date?: string;
@@ -51,7 +51,7 @@ const CustomSwiper: React.FC<CustomSwiperProps> = ({
                 title={item.title}
                 image1Url={item.image1}
                 image2Url={item.image2}
-                description={item.description}
+                description={item.description ?? ""}
                 siteUrl={item.url}
                 githubUrl={item.githubUrl}
                 techs={item.techs ?? []}
@@ -65,10 +65,8 @@ const CustomSwiper: React.FC<CustomSwiperProps> = ({
             <SwiperSlide className={s.swiperSlide} key={index}>
               <CertificationCard
                 title={item.title}
-                description={item.description}
                 image1={item.image1}
                 image2={item.image2}
-                date={item.date ?? ""}
                 url={item.url}
               />
             </SwiperSlide>

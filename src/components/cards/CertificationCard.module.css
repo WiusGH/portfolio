@@ -1,15 +1,13 @@
 .certificationCard {
   display: flex;
   flex-direction: column;
-  background-color: var(--secondary-color);
+  background-color: var(--card-color);
+  box-shadow: rgba(0, 0, 0, 0.2) 0 4px 12px;
   gap: 5px;
   border-radius: 6px;
   padding: 2% 3%;
   width: 60%;
   transition: transform 0.3s ease-in-out;
-  &:hover {
-    transform: scale(0.95);
-  }
   @media (max-width: 768px) {
     width: 100%;
     padding: 4% 6%;
@@ -18,6 +16,7 @@
 
 .title {
   font-size: 1.2rem;
+  margin-bottom: 5px;
 }
 
 .image {
@@ -56,24 +55,27 @@
   visibility: visible;
 }
 
-.description {
-  font-size: 0.9rem;
-  margin: 5px 0 3px;
-}
-
 .link {
   display: flex;
+  justify-content: center;
   gap: 10px;
-  a {
-    text-decoration: none;
-  }
-  span {
+  margin-top: 2%;
+  text-decoration: none;
+  div {
+    background-image: linear-gradient(90deg, #2d336b, #0e42aa);
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    background-size: 200% 200%;
+    transition: background-position 0.5s ease-in-out;
     display: flex;
     align-items: center;
     gap: 5px;
-    background-color: gray;
-    border-radius: 2px;
-    color: var(--text-color);
-    padding: 2px 4px;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    color: white;
+    font-size: 1.2rem;
+    padding: 2% 4%;
+    &:hover {
+      background-position: right center;
+    }
   }
 }

@@ -1,13 +1,14 @@
 :root {
   --background-color: #fbfbfb;
   --background-color-opposite: #121212;
-  --card-color: #777575;
+  --card-color: #ffffff;
   --text-color: #333333;
   --text-color-opposite: #e0e0e0;
-  --primary-color: #0078ff;
-  --secondary-color: #f0f0f0;
+  --primary-color: #3674b5;
+  --secondary-color: #578fca;
+  --tertiary-color: #a1e3f9;
   --sidebar-background: #e8f9ff;
-  --tag-color: #c4d9ff;
+  --tag-color: #e8f9ff;
 
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 
@@ -22,11 +23,12 @@
 [data-theme="dark"] {
   --background-color: #121212;
   --background-color-opposite: #fbfbfb;
-  --card-color: #c1c0c0;
+  --card-color: #333333;
   --text-color: #e0e0e0;
   --text-color-opposite: #333333;
-  --primary-color: #66ccff;
+  --primary-color: #f5f5f5;
   --secondary-color: #333333;
+  --tertiary-color: #a1e3f9;
   --sidebar-background: #1e1e1e;
   --tag-color: #003161;
 }
@@ -65,6 +67,7 @@ body {
 }
 
 .main-content {
+  background-color: var(--background-color);
   overflow-y: auto;
   height: 100vh;
 }
@@ -149,11 +152,11 @@ h5 {
   cursor: default;
   font-size: 2.5rem;
   margin: 0 auto 2%;
-  text-shadow: 0px 0px 25px var(--text-color);
+  text-shadow: 0px 0px 25px #e0e0e0;
   transition: 0.3s ease-in-out;
   width: fit-content;
   &:hover {
-    color: var(--text-color-opposite);
+    color: var(--background-color);
     text-shadow: 0px 0px 5px var(--text-color);
   }
   @media (max-width: 768px) {

@@ -37,13 +37,14 @@ export const translations = {
     goFit: "Platform for fitness classes.",
 
     // certifications
-    alura: "Backend Finalization Certificate",
-    generation: "Generation Chile's Finalization Certificate",
-    poliglota: "English proficiency certificate",
-    poss: "No Country's proof of soft skills",
-    udc: "Python programming introduction",
-    udemyPython: "Udemy's Python course completion certificate",
-    udemyWeb: "Udemy's web development course completion certificate",
+    alura: "Oracle Next Generation G7",
+    generation: "Generation Chile",
+    poliglota: "Políglota",
+    possEs: "No Country - Proof of soft skills in spanish",
+    possEn: "No Country - Proof of soft skills in english",
+    udc: "University of Chile",
+    udemyPython: "Udemy - Python",
+    udemyWeb: "Udemy - Web development",
     webTitle: "Portfolio",
   },
   es: {
@@ -83,13 +84,14 @@ export const translations = {
     goFit: "Plataforma de turnos para clases de fitness.",
 
     // Certifications
-    alura: "Certificado Finalización de formación backend",
-    generation: "Certificado Finalización de Generation Chile",
-    poliglota: "Certificado de proficiencia en inglés",
-    poss: "Certificado de habilidades blandas de No Country",
-    udc: "Introducción a la programación con Python",
-    udemyPython: "Certificado de completación de curso de Python de Udemy",
-    udemyWeb: "Certificado de completación de curso de desarrollo web de Udemy",
+    alura: "Oracle Next Generation G7",
+    generation: "Generation Chile",
+    poliglota: "Políglota",
+    possEs: "No Country - Proof of soft skills en español",
+    possEn: "No Country - Proof of soft skills en inglés",
+    udc: "Universidad de Chile",
+    udemyPython: "Udemy - Python",
+    udemyWeb: "Udemy - Desarrollo web",
     webTitle: "Portafolio",
   },
 };

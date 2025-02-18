@@ -34,18 +34,18 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       <p className={style.description}>{description}</p>
       <div className={style.links}>
         <a href={siteUrl} target="_blank" rel="noopener noreferrer">
-          <span>
+          <div>
             <IoIosGlobe />
             {t("seeSite")}
-          </span>
+          </div>
         </a>
         {githubUrl && (
           <a href={githubUrl} target="_blank" rel="noopener noreferrer">
-            <span>
+            <div>
               <FaGithub />
 
               {t("seeRepo")}
-            </span>
+            </div>
           </a>
         )}
       </div>

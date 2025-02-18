@@ -2,6 +2,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
   padding: 6px 10px;
   font-size: 16px;
   font-weight: bold;
@@ -14,4 +15,19 @@
     transform: scale(1.05);
     opacity: 0.8;
   }
+}
+
+.GitHub {
+  border-color: var(--text-color);
+  & svg {
+    color: var(--text-color);
+  }
+}
+
+.LinkedIn {
+  border-color: #0077b5;
+}
+
+.Email {
+  border-color: #ff6600;
 }

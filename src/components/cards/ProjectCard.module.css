@@ -1,7 +1,8 @@
 .projectCard {
   display: flex;
   flex-direction: column;
-  background-color: var(--secondary-color);
+  background-color: var(--card-color);
+  box-shadow: rgba(0, 0, 0, 0.2) 0 4px 12px;
   gap: 5px;
   border-radius: 6px;
   padding: 2% 3%;
@@ -14,6 +15,7 @@
 
 .title {
   font-size: 1.2rem;
+  padding-bottom: 5px;
 }
 
 .imagesContainer {
@@ -63,11 +65,11 @@
   a {
     text-decoration: none;
   }
-  span {
+  div {
     display: flex;
     align-items: center;
     gap: 5px;
-    background-color: gray;
+    background-color: var(--tag-color);
     border-radius: 2px;
     color: var(--text-color);
     padding: 2px 4px;

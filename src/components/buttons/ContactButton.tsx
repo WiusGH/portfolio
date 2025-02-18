@@ -10,7 +10,6 @@ const ContactButton: React.FC<ContactButtonProps> = ({ type }) => {
   const contactInfo = {
     GitHub: {
       url: "https://github.com/WiusGH",
-      borderColor: "white",
       icon: <FaGithub color="white" />,
     },
     LinkedIn: {
@@ -25,20 +24,18 @@ const ContactButton: React.FC<ContactButtonProps> = ({ type }) => {
     },
     WhatsApp: {
       url: "https://wa.me/56935448591",
-      borderColor: "#25D366",
       icon: <FaWhatsapp color="#25D366" />,
     },
   };
 
-  const { url, borderColor, icon } = contactInfo[type];
+  const { url, icon } = contactInfo[type];
 
   return (
     <a
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className={styles.button}
-      style={{ borderColor }}
+      className={`${styles.button} ${styles[type]}`}
     >
       {icon} {type}
     </a>
