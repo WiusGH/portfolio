@@ -51,13 +51,13 @@ const TechCard: React.FC<TechCardProps> = ({ tech }) => {
       case "springboot":
         return <img src={spring} alt="springboot" />;
       case "mysql":
-        return <img src={mysql} alt="mysql" />;
+        return <img className={style.shadow} src={mysql} alt="mysql" />;
       case "postgres":
         return <img src={postgres} alt="postgres" />;
       case "mongodb":
         return <img src={mongo} alt="mongodb" />;
       case "aws":
-        return <img src={aws} alt="aws" />;
+        return <img className={style.shadow} src={aws} alt="aws" />;
       case "git":
         return <img src={git} alt="git" />;
       case "github":

@@ -20,8 +20,9 @@
 .swiperSlide {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   transition: transform 0.3s ease-in-out;
+  z-index: 9999;
 }
 
 .swiper-slide {

@@ -16,11 +16,40 @@
   font-size: 1.2rem;
 }
 
+.imagesContainer {
+  position: relative;
+}
+
 .image {
   border-radius: 8px;
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
+}
+
+.image:first-of-type {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+.image:nth-of-type(2) {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.projectCard:hover .image:first-of-type {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.projectCard:hover .image:nth-of-type(2) {
+  opacity: 1;
+  visibility: visible;
 }
 
 .description {

@@ -46,6 +46,7 @@ h5::after {
   gap: 2rem;
   animation: scroll 80s linear infinite;
   @media (max-width: 768px) {
+    animation: scroll 60s linear infinite;
     gap: 0;
   }
 }

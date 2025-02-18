@@ -6,6 +6,10 @@
   border-radius: 6px;
   padding: 2% 3%;
   width: 60%;
+  transition: transform 0.3s ease-in-out;
+  &:hover {
+    transform: scale(0.95);
+  }
   @media (max-width: 768px) {
     width: 100%;
     padding: 4% 6%;
@@ -21,6 +25,35 @@
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
+}
+
+.image:first-of-type {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+.image:nth-of-type(2) {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.imagesContainer {
+  position: relative;
+}
+
+.certificationCard:hover .image:first-of-type {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.certificationCard:hover .image:nth-of-type(2) {
+  opacity: 1;
+  visibility: visible;
 }
 
 .description {

@@ -4,12 +4,14 @@ import "swiper/swiper-bundle.css";
 import s from "./CustomSwiper.module.css";
 import CertificationCard from "../cards/CertificationCard";
 import ProjectCard from "../cards/ProjectCard";
+import useScreenSize from "../hooks/useScreenSize";
 
 interface CustomSwiperProps {
   itemsList: {
     title: string;
     description: string;
-    image: string;
+    image1: string;
+    image2: string;
     date?: string;
     url: string;
     githubUrl?: string;
@@ -22,18 +24,19 @@ const CustomSwiper: React.FC<CustomSwiperProps> = ({
   itemsList,
   projects = false,
 }) => {
+  const isSmallScreen = useScreenSize(768);
   return (
     <Swiper
       className={s.swiperContainer}
       modules={[EffectCoverflow, Pagination, Autoplay]}
-      spaceBetween={20}
+      spaceBetween={isSmallScreen ? -20 : -400}
       slidesPerView={1.3}
       centeredSlides={true}
       effect="coverflow"
       coverflowEffect={{
-        rotate: 5,
-        stretch: 100,
-        depth: 100,
+        rotate: isSmallScreen ? 15 : 35,
+        stretch: isSmallScreen ? 20 : 0,
+        depth: 200,
         modifier: 2,
         slideShadows: true,
       }}
@@ -46,7 +49,8 @@ const CustomSwiper: React.FC<CustomSwiperProps> = ({
             <SwiperSlide className={s.swiperSlide} key={index}>
               <ProjectCard
                 title={item.title}
-                imageUrl={item.image}
+                image1Url={item.image1}
+                image2Url={item.image2}
                 description={item.description}
                 siteUrl={item.url}
                 githubUrl={item.githubUrl}
@@ -62,7 +66,8 @@ const CustomSwiper: React.FC<CustomSwiperProps> = ({
               <CertificationCard
                 title={item.title}
                 description={item.description}
-                image={item.image}
+                image1={item.image1}
+                image2={item.image2}
                 date={item.date ?? ""}
                 url={item.url}
               />
