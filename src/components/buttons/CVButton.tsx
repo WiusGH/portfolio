@@ -11,7 +11,7 @@ const CVButton = () => {
       href={language === "en" ? cvEn : cv}
       download="CV Wilsconidel"
     >
-      📄 {t("downloadCV")}
+      <div className={style.icon}>📄</div> {t("downloadCV")}
     </a>
   );
 };

@@ -3,9 +3,10 @@
   justify-content: center;
   align-items: center;
   gap: 3px;
-  background-color: var(--tag-color);
+  background-image: var(--tag-color);
   border-radius: 6px;
   box-shadow: rgba(0, 0, 0, 0.1) 0 0 4px;
+  color: white;
   cursor: default;
   padding: 6px 8px;
   width: fit-content;
@@ -47,7 +48,7 @@
 }
 
 .flask {
-  color: var(--text-color);
+  color: white;
 }
 
 .vite {
@@ -71,7 +72,7 @@
 }
 
 .github {
-  color: var(--text-color);
+  color: white;
 }
 
 .vscode {
@@ -79,19 +80,19 @@
 }
 
 .intellij {
-  color: var(--text-color);
+  color: white;
 }
 
 .pycharm {
-  color: var(--text-color);
+  color: white;
 }
 
 .render {
-  color: var(--text-color);
+  color: white;
 }
 
 .vercel {
-  color: var(--text-color);
+  color: white;
 }
 
 .postman {

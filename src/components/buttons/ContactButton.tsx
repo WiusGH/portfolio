@@ -10,7 +10,7 @@ const ContactButton: React.FC<ContactButtonProps> = ({ type }) => {
   const contactInfo = {
     GitHub: {
       url: "https://github.com/WiusGH",
-      icon: <FaGithub color="white" />,
+      icon: <FaGithub />,
     },
     LinkedIn: {
       url: "https://www.linkedin.com/in/wius/",

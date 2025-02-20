@@ -16,3 +16,7 @@
     opacity: 0.8;
   }
 }
+
+.icon {
+  filter: drop-shadow(0 0 2px black);
+}

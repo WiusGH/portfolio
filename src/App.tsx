@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import useScreenSize from "./components/hooks/useScreenSize";
-import { IoIosArrowDroprightCircle } from "react-icons/io";
+import { MdOutlineDoubleArrow } from "react-icons/md";
 import ProfileInfo from "./components/sidebar content/ProfileInfo";
 import AboutMe from "./components/main content/about me/AboutMe";
 // import ProfileSection from "./components/containers/ProfileSection";
@@ -80,7 +80,7 @@ const App: React.FC = () => {
       >
         {isSmallScreen && (
           <section className="sidebar-toggle" onClick={toggleSidebar}>
-            <IoIosArrowDroprightCircle
+            <MdOutlineDoubleArrow
               className={`arrow-icon ${sidebarOpen ? "open" : ""}`}
             />
           </section>
