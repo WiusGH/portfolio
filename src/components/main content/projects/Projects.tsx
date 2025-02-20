@@ -5,6 +5,8 @@ import sweetCreation from "../../../assets/screenshots/sweet-creation.png";
 import sweetCreation2 from "../../../assets/screenshots/sweet-creation2.png";
 import betterCommerce from "../../../assets/screenshots/better-commerce.png";
 import betterCommerce2 from "../../../assets/screenshots/better-commerce2.png";
+import huellitas1 from "../../../assets/screenshots/huellitas1.png";
+import huellitas2 from "../../../assets/screenshots/huellitas2.png";
 import converter from "../../../assets/screenshots/converter.png";
 import cerrajeria from "../../../assets/screenshots/cerrajero.png";
 import cerrajeria2 from "../../../assets/screenshots/cerrajero2.png";
@@ -16,6 +18,15 @@ import CustomSwiper from "../../swipers/CustomSwiper";
 const Projects = () => {
   const { t } = useLanguage();
   const projectsList = [
+    {
+      title: "Visualizador de productos de un E-commerce",
+      description: t("eCommerce"),
+      image1: betterCommerce,
+      image2: betterCommerce2,
+      url: "https://prueba-tecnica-silk.vercel.app/",
+      githubUrl: "https://github.com/WiusGH/prueba-tecnica",
+      techs: ["React", "Typescript", "Material UI", "Vercel"],
+    },
     {
       title: "PlayDOM",
       description: t("playDOM"),
@@ -34,13 +45,12 @@ const Projects = () => {
       techs: ["React", "Vite", "Typescript", "Vercel"],
     },
     {
-      title: "Visualizador de productos de un E-commerce",
-      description: t("eCommerce"),
-      image1: betterCommerce,
-      image2: betterCommerce2,
-      url: "https://prueba-tecnica-silk.vercel.app/",
-      githubUrl: "https://github.com/WiusGH/prueba-tecnica",
-      techs: ["React", "Typescript", "Material UI", "Vercel"],
+      title: "Huelllitas APIs",
+      description: t("huellitas"),
+      image1: huellitas1,
+      image2: huellitas2,
+      url: "https://documenter.getpostman.com/view/28362485/2sAXjRW9ND#2f2d76e6-872e-408e-81a0-d65b04718f7b",
+      techs: ["Python", "Flask", "Postman", "MongoDB", "AWS", "Render"],
     },
     {
       title: "Conversor de monedas de Alura",

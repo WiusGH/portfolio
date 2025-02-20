@@ -44,12 +44,12 @@
   left: 0;
 }
 
-.projectCard:hover .image:first-of-type {
+.imagesContainer:hover .image:first-of-type {
   opacity: 0;
   visibility: hidden;
 }
 
-.projectCard:hover .image:nth-of-type(2) {
+.imagesContainer:hover .image:nth-of-type(2) {
   opacity: 1;
   visibility: visible;
 }

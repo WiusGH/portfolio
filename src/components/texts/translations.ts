@@ -35,6 +35,8 @@ export const translations = {
     cerrajeria:
       "Website with own domain created so that my client could offer their services.",
     goFit: "Platform for fitness classes.",
+    huellitas:
+      "RESTful APIs with non-relational database MongoDB, AWS S3 for image storage, HTTP-only cookies, JWT and requests limiter.",
 
     // certifications
     alura: "Oracle Next Generation G7",
@@ -82,6 +84,8 @@ export const translations = {
     cerrajeria:
       "Sitio web con dominio propio creado para que mi cliente pudiese ofrecer sus servicios.",
     goFit: "Plataforma de turnos para clases de fitness.",
+    huellitas:
+      "APIs RESTful con base de datos no relacional MongoDB, AWS S3 para el almacenamiento de imágenes, HTTP-only cookies, JWT y limitador de solicitudes.",
 
     // Certifications
     alura: "Oracle Next Generation G7",

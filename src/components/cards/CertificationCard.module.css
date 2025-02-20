@@ -45,12 +45,12 @@
   position: relative;
 }
 
-.certificationCard:hover .image:first-of-type {
+.imagesContainer:hover .image:first-of-type {
   opacity: 0;
   visibility: hidden;
 }
 
-.certificationCard:hover .image:nth-of-type(2) {
+.imagesContainer:hover .image:nth-of-type(2) {
   opacity: 1;
   visibility: visible;
 }
@@ -59,6 +59,7 @@
   display: flex;
   justify-content: center;
   gap: 10px;
+  cursor: default;
   margin-top: 2%;
   text-decoration: none;
   div {
@@ -69,6 +70,7 @@
     display: flex;
     align-items: center;
     gap: 5px;
+    cursor: pointer;
     background-color: var(--primary-color);
     border-radius: 8px;
     color: white;
