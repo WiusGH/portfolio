@@ -29,12 +29,12 @@ export const translations = {
     sweetCreation:
       "Web application that allows users to make orders of personalized products from pastry shop.",
     eCommerce:
-      "Visualizer of products created with reusable and dynamic components that allow filtering and ordering products from an E-commerce.",
+      "Products viewer created with reusable and dynamic components that allow filtering and ordering products from an E-commerce.",
     converter:
       "Currency converter whose backend was created with Java but as extra I implemented a frontend for the user.",
     cerrajeria:
-      "Website with own domain created so that my client could offer their services.",
-    goFit: "Platform for fitness classes.",
+      "Website with its own domain created so that my client could offer their services.",
+    goFit: "Web application for scheduling fitness classes.",
     huellitas:
       "RESTful APIs with non-relational database MongoDB, AWS S3 for image storage, HTTP-only cookies, JWT and requests limiter.",
 
